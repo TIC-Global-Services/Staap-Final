@@ -371,7 +371,7 @@ const R320 = () => {
                 towards Old Mahabalipuram Road, the design introduces a
                 punctured core between two rigid structures. This central void
                 draws the structure’s edges inward, creating filleted corners
-                that enhance the façade’s visual appeal. The massing evolves
+                that enhance the facade’s visual appeal. The massing evolves
                 hierarchically from the ground to the second floor, resulting in
                 an inviting building.
               </p>
@@ -541,13 +541,13 @@ const R320 = () => {
             >
               <div className=" flex-1">
                 {project.ProjectAssets.length > 0 &&
-                project.ProjectAssets[9] ? (
+                project.ProjectAssets[14] ? (
                   <div className="h-full  w-full">
-              {project.ProjectAssets.length > 0 && project.ProjectAssets[2] ? (
-                isVideoFile(project.ProjectAssets[2]) ? (
+              {project.ProjectAssets.length > 0 && project.ProjectAssets[14] ? (
+                isVideoFile(project.ProjectAssets[14]) ? (
                   <video
                     className="w-full h-fit object-contain rounded-md object-center"
-                    src={project.ProjectAssets[2]}
+                    src={project.ProjectAssets[14]}
                     muted
                     autoPlay
                     playsInline
@@ -556,7 +556,7 @@ const R320 = () => {
                 ) : (
                   <img
                     className="w-full   rounded-sm object-center "
-                    src={project.ProjectAssets[2] || "/placeholder.svg"}
+                    src={project.ProjectAssets[14] || "/placeholder.svg"}
                     alt={project.name}
                   />
                 )
@@ -597,7 +597,7 @@ const R320 = () => {
                 The facade is illuminated with
                 flush lights and spotlights, enhancing its aesthetic appeal. The
                 structure consists of 250 mm thick post-tensioned floor slab
-                anchor ing a framework of 100x100 mm folded metal sheets and
+                anchoring a framework of 100x100 mm folded metal sheets and
                 100x20 mm mild steel L angles bordering the glass panels. The
                 facade incorporates 1500x3500 mm, 12 mm thick single-glazed
                 glass panels within an aluminum framing system. Additionally,

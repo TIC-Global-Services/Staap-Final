@@ -68,6 +68,7 @@ import mdbottomvid from "../assets/Projects and Replacements/MADE IN/5.mp4"
 // R320 assets  images 
 import rvid from "../assets/Projects and Replacements/R320/topvideo.mp4"
 import r2  from "../assets/Projects and Replacements/R320/2.png"
+import mb3  from "../assets/Projects and Replacements/R320/mb3.png"
 import r3  from "../assets/Projects and Replacements/R320/3.png"
 import r4  from "../assets/Projects and Replacements/R320/4.png"
 import r5  from "../assets/Projects and Replacements/R320/5.png"
@@ -125,7 +126,7 @@ export const projectsData = [
     scope: " Architecture / Facade",
     clickable: true,
     images: [P1c],
-    ProjectAssets:[rvid,r2,r3,r4,r5,iso1,iso2,iso3,iso4,ele1,ele2,ele3,fac1,fac2],
+    ProjectAssets:[rvid,r2,r3,r4,r5,iso1,iso2,iso3,iso4,ele1,ele2,ele3,fac1,fac2,mb3,],
     bgColor:"#c6c2bf",
     navColor:"#c6c2bf",
     team:"Mithun Adhitya, Karthik Keshav, Vinoth Kumar, Mithra Balasekaran",
@@ -148,7 +149,7 @@ export const projectsData = [
     team: "Karthik Keshev, Mithun Adhitya, Benny Samuel",
     images:[P2c],
     ProjectAssets:[pan1,pan2,pan3,pan4,pan5,pan6,pan7,pan8,pan9,pan10],
-    desc:"A house designed in a small residential area in urban context. Our design stream here is based on the space is defined by its lines, projections, intersections, and material combination with three layers of volume. A dynamic play of open and closure enabledby a perforated brick wall, resulting in a dynamic shadow play.."
+    desc:"A house designed in a small residential area in urban context. Our design stream here is based on the space is defined by its lines, projections, intersections, and material combination with three layers of volume. A dynamic play of open and closure enabled by a perforated brick wall, resulting in a dynamic shadow play."
   },
 
   {

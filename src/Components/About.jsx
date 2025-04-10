@@ -266,7 +266,7 @@ const About = () => {
                 </div>
                 <div className="w-[30%] ml-3 mr-1 h-full text-left   ">
                   <h5>Mithun Adhitya</h5>
-                  <h5>Karthik Keshav</h5>
+                  <h5>Karthik Keshev</h5>
                   <h5>Anjhana Kumar</h5>
                   <h5>Mithra Anantham</h5>
                   <h5>Benny Samuel</h5>
@@ -286,7 +286,7 @@ const About = () => {
                   <h5>[Architect]</h5>
                 </div>
                 <div className="w-[30%] h-full ml-3 mr-1 text-left">
-                  <h5 className={`${isDarkMode ? " text-white" : "text-black"}`}>Sanjay Kannan </h5>
+                  <h5 className={`${isDarkMode ? " text-white" : "text-black"}`}>Sanjay Kanna</h5>
                   <p>Rukkesh Kannan</p>
                   <p>Sonika Matta</p>
                 </div>
@@ -294,7 +294,7 @@ const About = () => {
                 <div className={`w-[20%] h-full text-left ${isDarkMode ? " text-white" : "text-black"}`}>
                   <h5>Kavin Raj</h5>
                   <h5>Vinmeen Kritheka</h5>
-                  <h5>Vyomini Balamurugan</h5>
+                  <h5>Vyomini B</h5>
                   <p className=" text-zinc-400">Sai Sidharth</p>
                   <p className=" text-zinc-400">Harish Raghavan</p>
                 </div>
@@ -325,7 +325,7 @@ const About = () => {
                 </div>
                 <div className="w-2/3 ml-4   h-full text-left   ">
                   <h5>Mithun Adhitya</h5>
-                  <h5>Karthik Keshav</h5>
+                  <h5>Karthik Keshev</h5>
                   <h5>Anjhana Kumar</h5>
                   <h5>Mithra Anantham</h5>
                   <h5>Benny Samuel</h5>
@@ -352,8 +352,8 @@ const About = () => {
 
                 <div className={`w-[50%] mr-4 h-full ${isDarkMode ? " text-white" : "text-black"}  text-left `}>
                   <h5>Kavin Raj</h5>
-                  <h5>Vinmeen Kritheka</h5>
-                  <h5>Vyomini Balamurugan</h5>
+                  <h5>Vinmeen Kirtheka</h5>
+                  <h5>Vyomini B</h5>
                   <p className=" text-zinc-400">Sai Sidharth</p>
                   <p className=" text-zinc-400">Harish Raghavan</p>
                 </div>
