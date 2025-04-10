@@ -296,26 +296,29 @@ const Navbar = () => {
         >
           <div className="logo h-16 w-14">
             <button onClick={() => handleNavClick(0)}>
-
-              {/* Conditionally render logo based on page background and dark mode */}
               <div className="h-full w-full flex items-center justify-center">
-
-                {/* Logo for Project Page with Black Background */}
-                {isProjectPagebgBlack && !isProjectPagebgwhite ? (
+                {isProjectPagebgwhite ? (
+                  // For white background project pages - ALWAYS black logo only
+                  <img
+                    className="h-full w-full object-cover"
+                    src={logob || "/placeholder.svg"}
+                    alt="Black Logo"
+                  />
+                ) : isProjectR320 ? (
+                  // R320 project - white logo
                   <img
                     className="h-full w-full object-cover"
                     src={logow || "/placeholder.svg"}
-                    alt="Black Logo"
+                    alt="White Logo"
                   />
                 ) : (
-                  // Logo for Project Page with White Background or Dark Mode
+                  // Other pages - based on dark mode
                   <img
                     className="h-full w-full object-cover"
                     src={isDarkMode ? logow : logob || "/placeholder.svg"}
                     alt="Logo"
                   />
                 )}
-
               </div>
             </button>
           </div>
@@ -406,6 +409,7 @@ const Navbar = () => {
         </div>
       </nav>
 
+
       {/* Mobile Navbar (visible on small screens) - Fixed position on mobile */}
       <nav
         ref={TopNavbarRef2}
@@ -418,103 +422,61 @@ const Navbar = () => {
           position: isMobile ? "fixed" : "absolute",
           top: 0,
           left: 0,
-          // backgroundColor: bgColor,
         }}
       >
-        <div className="relative flex items-center justify-between gap-5  w-full">
+        <div className="relative flex items-center justify-between gap-5 w-full">
           <button onClick={() => handleNavClick(0)}>
-            {/* where the bg white it ad the logo white */}
-            {isProjectPagebgwhite && (
-              <div className="relative  top-2 mb-1">
-                {" "}
-                {/* //by using  top fix the for the projectwhitepage */}
-                {/* Replace with your logo */}
-                <div className=" h-5 w-14">
-                  {/* Replace with your logo */}
-                  <div className="h-full w-full flex items-center justify-center">
-                    <img
-                      className=" h-full w-full object-cover"
-                      src={logob || "/placeholder.svg"}
-                      alt="logob"
-                      srcSet=""
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* for other black and white project section */}
-
-            {isProjectPage && (
-              <div className=" relative">
-                <div className=" absolute h-5 w-14">
-                  {/* Replace with your logo */}
-                  <div className=" h-full w-full flex items-center justify-center">
-                    <img
-                      className=" h-full w-full object-cover"
-                      src={logob || "/placeholder.svg"}
-                      alt="logob"
-                      srcSet=""
-                    />
-                  </div>
-                </div>
-
-                <div className=" absolute h-5 w-14">
-                  {/* Replace with your logo */}
-                  <div className=" h-full flex items-center justify-center text-xs">
-                    <img
-                      className=" h-full w-full object-cover"
-                      src={logow || "/placeholder.svg"}
-                      alt="logow"
-                      srcSet=""
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* based on the theme*/}
-            {isDarkMode ? (
-              <div className="h-5 w-14">
-                {/* Replace with your logo */}
-                <div className=" h-full flex items-center justify-center text-xs">
+            {/* Logo rendering based on page type */}
+            <div className="h-5 w-14">
+              <div className="h-full w-full flex items-center justify-center">
+                {isProjectPagebgwhite ? (
+                  // White background project pages - always black logo
                   <img
-                    className=" h-full w-full object-cover "
-                    src={logow || "/placeholder.svg"}
-                    alt="logow"
-                    srcSet=""
-                  />
-                </div>
-              </div>
-            ) : (
-              <div className=" h-5 w-14">
-                {/* Replace with your logo */}
-                <div className=" h-full w-full flex items-center justify-center">
-                  <img
-                    className=" h-full w-full object-cover "
+                    className="h-full w-full object-cover"
                     src={logob || "/placeholder.svg"}
-                    alt="logob"
-                    srcSet=""
+                    alt="Black Logo"
                   />
-                </div>
+                ) : isProjectR320 ? (
+                  // R320 project - white logo
+                  <img
+                    className="h-full w-full object-cover"
+                    src={logow || "/placeholder.svg"}
+                    alt="White Logo"
+                  />
+                ) : isProjectPagebgBlack ? (
+                  // Black background project pages - white logo
+                  <img
+                    className="h-full w-full object-cover"
+                    src={logow || "/placeholder.svg"}
+                    alt="White Logo"
+                  />
+                ) : (
+                  // Other pages - based on dark mode
+                  <img
+                    className="h-full w-full object-cover"
+                    src={isDarkMode ? logow : logob || "/placeholder.svg"}
+                    alt="Logo"
+                  />
+                )}
               </div>
-            )}
+            </div>
           </button>
         </div>
         {mobileMenuOpen && (
           <div className="relative flex items-center justify-end">
             <p
               className={`
-                ${isProjectR320
+          ${isProjectR320
                   ? "text-white"
-                  : isProjectPagebgBlack && !isProjectPagebgwhite
+                  : isProjectPagebgBlack
                     ? "text-zinc-400 hover:text-white"
-                    : isProjectPagebgwhite ? "text-zinc-400 hover:text-black"
+                    : isProjectPagebgwhite
+                      ? "text-zinc-400 hover:text-black"
                       : isDarkMode
                         ? "text-white/40 hover:text-white"
                         : "text-black/40 hover:text-black"
                 }
-              text-[8px] whitespace-pre-wrap hyphens-auto w-full py-1 text-right tracking-normal  leading-none`}
+        text-[8px] whitespace-pre-wrap hyphens-auto w-full py-1 text-right tracking-normal leading-none`}
             >
               Your space holds a story waiting to be told. We craft visions into elegant designs that echo art, culture,
               and life. Share your ideas with us, and together, let's design a space that reflects your unique
