@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family:'Helvetica';
+  src: url('./assets/Fonts/helvetica-light.woff2') format('woff2');
+}
+
+@layer base {
+  html, body {
+    font-family: 'Helvetica', sans-serif !important;
+    overflow: hidden;
+  }
+}
+
+
+
+
+.min-h {
+  min-height: calc(100% - 6rem);
+}
+
+.tablegallary{
+   /* overflow-y:scroll; */
+   -webkit-overflow-scrolling:touch !important;
+}
+
+
+@font-face {
+  font-family:'Helvetica_Light';
+  src: url('./assets/Fonts/helvetica-light.woff2')format('woff2'),  
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Remove transitions to prevent conflicts with GSAP */
+* {
+  transition: none !important;
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  min-height: 100vh;
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* .custom-bottom {
+  bottom: calc(212px + env(safe-area-inset-bottom,0px));
+} */
+
+
+
+
+          /* {<div className="flex flex-col  w-[46%] bg-blue-800 justify-start items-end">
+            <div className="smartcontainer w-[60%]  bg-red-400 aspect-[4/5] mt-4 rounded-sm overflow-hidden">
+              {project.ProjectAssets.length > 0 && project.ProjectAssets[0].endsWith('.mp4') ? (
+                <video
+                  className="w-full h-full object-fit rounded-md object-center"
+                  // src={project.ProjectAssets[0]}
+                  muted
+                  autoPlay
+                  loop
+                ></video>                
+              ) : (
+                <img
+                  className="w-full h-full object-cover rounded-sm object-bottom"
+                  // src={project.ProjectAssets[0] || "/placeholder.svg"}
+                  alt=""
+                  srcset={project.ProjectAssets[0]}
+                />
+              )}
+            </div>
+
+            <div className="w-[60%]  mt-4  font-medium h-full text-left">
+              <div className={`img-text w-full  text-zinc-400  items-end flex flex-col justify-start text-[11px] leading-none`}>
+                <div className="h-1/2 w-full flex justify-between items-center ">
+                  <h5 className="font-medium  whitespace-nowrap text-left">
+                    Built up Area : {project.buildArea} Sq.ft
+                  </h5>
+                  <h5 className="whitespace-nowrap  text-right ">Site area: {project.siteArea} Sq.ft</h5>
+                </div>
+
+                <div className=" h-1/2 w-full flex justify-between items-center">
+                  <h6 className="text-left mt-4 ">
+                    Team : <br />
+                    {project.team}
+                  </h6>
+
+                  <h5 className="text-right ">{project.scope}</h5>
+                </div>
+              </div>
+            </div>
+
+            <h6
+              className={`text-[11px]  text-zinc-400  whitespace-pre-wrap  w-[55%]  text-center md:text-right leading-tight mt-6 pb-3 `}
+            >
+              {project.desc}
+            </h6>
+          </div> */
+
+
+
+          
