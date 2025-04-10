@@ -363,7 +363,7 @@ const About = () => {
         </div>
 
         {/* //publication awwards */}
-        <div className="part3 h-full w-full ">
+        <div className="part3 h-full w-full pb-10 ">
           <div
             className={`text-[11px] ${
               isMobile ? "py-3 " : " "

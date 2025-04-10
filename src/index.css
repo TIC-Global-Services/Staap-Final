@@ -14,13 +14,6 @@
   }
 }
 
-.smartliving-desk {
-  overflow-y: auto; /* Enable vertical scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
-  overscroll-behavior: contain; /* Prevent overscroll from affecting parent elements */
-  height: 100vh; /* Ensure the container takes up full viewport height */
-}
-
 
 .min-h {
   min-height: calc(100% - 6rem);

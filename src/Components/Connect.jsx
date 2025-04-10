@@ -135,13 +135,14 @@ const Connect = () => {
                     {isMobile ? (
                       <>
                     
-                        <button className={` leading-none -mt-0.5 mb-2`}>
+                        <p className="inline-block text-zinc-400">Reach Us At</p>
+                        <button className={` leading-none  ml-2`}>
                           <a
                             className=""
                             href="mailTo:work@staap.in"
                             target="_blank"
                           >
-                          Reach ws work@staap.in
+                           work@staap.in
                           </a>
                         </button>
                       </>
@@ -409,7 +410,7 @@ const Connect = () => {
                 you’ve been imagining.
               </h5>
 
-              <h5 className="text-[15px] leading-none font-normal">+91-9994192333</h5>
+              <a href="tel:+91-9994192333" className="text-[15px] leading-none font-normal">+91-9994192333</a>
  
                  
               <div className=" mt-3  flex  gap-2 justify-between items-start ">

@@ -314,7 +314,7 @@ useEffect(() => {
                   onWheel={handleWheel}
                 >
                   <div
-                    className={`block pb-10 ${showAllImages
+                    className={`block pb-14 ${showAllImages
                         ? "overflow-x-auto overflow-y-auto"
                         : "overflow-x-hidden"
                       }`}

@@ -183,6 +183,51 @@ const Project = () => {
     return "text-zinc-400 hover:text-white";
   };
 
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || isMobile) return;
+
+    let startY = 0;
+    let isDragging = false;
+
+    const handleTouchStart = (e) => {
+      startY = e.touches[0].clientY;
+      isDragging = true;
+    };
+
+    const handleTouchMove = (e) => {
+      if (!isDragging) return;
+      const currentY = e.touches[0].clientY;
+      const deltaY = startY - currentY;
+      container.scrollTop += deltaY;
+      startY = currentY;
+      // Do NOT call e.preventDefault() here to allow mouse wheel scrolling
+    };
+
+    const handleTouchEnd = () => {
+      isDragging = false;
+    };
+
+    // Add passive: true to avoid blocking native behavior unnecessarily
+    container.addEventListener("touchstart", handleTouchStart, { passive: true });
+    container.addEventListener("touchmove", handleTouchMove, { passive: true });
+    container.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+    // Ensure mouse wheel scrolling works by not overriding native behavior
+    const handleWheel = (e) => {
+      // Let the browser handle wheel events naturally
+      container.scrollTop += e.deltaY;
+    };
+
+    container.addEventListener("wheel", handleWheel, { passive: true });
+
+    return () => {
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchmove", handleTouchMove);
+      container.removeEventListener("touchend", handleTouchEnd);
+      container.removeEventListener("wheel", handleWheel);
+    };
+  }, [isMobile]);
 
 
   return (
@@ -193,7 +238,11 @@ const Project = () => {
       </div>
 
       {/* Desktop version */}
-      <div style={{ backgroundColor: project.bgColor }} className={`smartliving-desk ${isMobile ? "hidden" : "visible"} w-full pt-24  pb-4  mt-3 `} ref={containerRef}>
+      <div
+        style={{ backgroundColor: project.bgColor }}
+        className={`${isMobile ? "hidden" : "block"} w-full pt-24 pb-4 mt-3 overflow-y-auto h-dvh`}
+        ref={containerRef}
+      >
         <div className="w-full flex justify-end items-center   px-3  ">
 
           <div
@@ -403,14 +452,14 @@ const Project = () => {
                 .
               </h5>
 
-              <p className={`mt-1 text-[15px] ${project.name === "R320" ? "text-white" : "text-zinc-400"} `}>+91-9994192333</p>
+              <a href="tel:+91-9994192333" className={`mt-1 text-[15px] ${project.name === "R320" ? "text-white" : "text-zinc-400"} `}>+91-9994192333</a>
             </div>
 
             <div className={`w-[55%] h-fit  flex  items-start text-[11px]  ${project.name === "R320" ? " text-white" : "text-zinc-400"} font-medium  text-left  pr-2 `}>
               <div className="row1 flex-col  justify-start items-start  w-1/2 ">
                 <div className="w-3/4 h-full ml-2 text-left   ">
                   <div className="flex flex-col  items-start  ">
-                    <p className="capitalize">Fallow us on</p>
+                    <p className="capitalize">Follow us on</p>
                     <button>
                       <a
                         className={` capitalize  pt-1 ${project.name === "R320" ? " text-white " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? "text-zinc-400 " : "text-zinc-400"} `}
@@ -469,7 +518,7 @@ const Project = () => {
       <div
         // style={{backgroundColor: project.bgColor}}
         ref={mobileContainerRef}
-        className={`smartliving-mobile ${isMobile ? "visible" : "hidden"} w-full pt-20 overflow-y-auto  pb-20  max-h-screen touch-pan-y`}
+        className={` ${isMobile ? "visible" : "hidden"} w-full pt-20 overflow-y-auto  pb-20  max-h-screen touch-pan-y`}
         style={{
           WebkitOverflowScrolling: 'touch', // Enable momentum scrolling on iOS 
           overscrollBehavior: 'contain', // Prevent scroll chain to parent
@@ -673,9 +722,9 @@ const Project = () => {
 
               </h5>
 
-              <p
+              <a href="tel:+91-9994192333"
 
-                className={`mt-1 text-[16px]  ${project.name === "R320" ? " text-white hover:text-black " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? " text-zinc-400 hover:text-black " : "text-zinc-400 hover:text-white"} `}>+91-9994192333</p>
+                className={`mt-1 text-[16px]  ${project.name === "R320" ? " text-white hover:text-black " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? " text-zinc-400 hover:text-black " : "text-zinc-400 hover:text-white"} `}>+91-9994192333</a>
             </div>
 
           </div>
