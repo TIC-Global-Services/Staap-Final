@@ -385,7 +385,7 @@ const Connect = () => {
         <div
           className={`part3 ${
             isMobile ? "pt-3  visible" : "pt-16 hidden"
-          }  h-fit w-full  pb-4   `}
+          }  h-fit w-full  pb-20   `}
         >
           <div className="text-[11px] h-full w-full  font-medium flex-col items-start  justify-between  text-left  ">
             <div className="flex w-full  flex-col gap-2  ">
