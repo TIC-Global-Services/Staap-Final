@@ -649,11 +649,10 @@ const Project = () => {
                               relatedProjects.map((relatedProject, index) => (
                                 <div
                                   key={relatedProject.id}
-                                  className={`flex w-full  justify-between ${index !== 0 ? "border-t-[0.2px] border-zinc-700" : ""
-                                    } 
-                                  ${project.name === "R320" ? " text-white hover:text-black " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? " text-zinc-400 hover:text-black " : "text-zinc-400 hover:text-white"}
-
-                                  `}
+                                  className={`flex w-full justify-between
+    ${index !== 0 ? getBorderClass(project.name) : ""}
+    ${getTextColorClass(project.name)}
+  `}
                                   onClick={() => {
                                     if (relatedProject.name === "R320" ||
                                       relatedProject.name === "MADE IN" ||

@@ -89,9 +89,9 @@ const Connect = () => {
                     </h5>
                   )}
 
-                  <p className="cursor-pointer  mt-1">
+                  <a href="tel:+91-9994192333" className="cursor-pointer  mt-1">
                     Contact - +91-9994192333{" "}
-                  </p>
+                  </a>
 
                   <a
                     className="cursor-pointer"

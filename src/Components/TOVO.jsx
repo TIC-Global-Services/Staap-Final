@@ -461,7 +461,7 @@ const TOVOProjectTable = ({ project }) => {
       {/* page 1*/}
       <div
         className={`smartliving w-full  ${isMobile ? " h-[50vh]" : "h-screen"
-          } mt-${isMobile ? "4 " : "6"} overflow-hidden rounded-md `}
+          } mt-${isMobile ? "4 " : "6"} overflow-hidden rounded-sm `}
       >
         {isMobile ? (
           <>
@@ -533,7 +533,7 @@ const TOVOProjectTable = ({ project }) => {
           {project.ProjectAssets.length > 0 && project.ProjectAssets[1] ? (
             project.ProjectAssets[1].type === "video/mp4" ? (
               <video
-                className="w-full h-full object-cover  rounded-md object-center"
+                className="w-full h-full object-cover  rounded-sm object-center"
                 src={project.ProjectAssets[1]}
                 muted
                 autoPlay
@@ -561,7 +561,7 @@ const TOVOProjectTable = ({ project }) => {
       <div
         className={`tovo2 relative w-full 
           ${isMobile ? " h-[60vh]" : "h-screen "} mt-${isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md `}
+          } overflow-hidden rounded-sm `}
       >
         {isMobile ? (
           <div
@@ -700,7 +700,7 @@ const TOVOProjectTable = ({ project }) => {
           {project.ProjectAssets.length > 0 && project.ProjectAssets[2] ? (
             project.ProjectAssets[2].type === "video/mp4" ? (
               <video
-                className="w-full h-full object-cover  rounded-md object-center"
+                className="w-full h-full object-cover  rounded-sm object-center"
                 src={project.ProjectAssets[2]}
                 muted
                 autoPlay
@@ -724,7 +724,7 @@ const TOVOProjectTable = ({ project }) => {
       <div
         className={`smartliving relative   w-full 
           ${isMobile ? " h-[60vh]" : "h-screen  -mt-16"} 
-        mt-${isMobile ? "4 " : "6"} overflow-hidden rounded-md `}
+        mt-${isMobile ? "4 " : "6"} overflow-hidden rounded-sm `}
       >
         {isMobile ? (
           <>
@@ -752,7 +752,7 @@ const TOVOProjectTable = ({ project }) => {
               {project.ProjectAssets.length > 0 && project.ProjectAssets[3] ? (
                 project.ProjectAssets[3].type === "video/mp4" ? (
                   <video
-                    className="w-full h-full object-cover rounded-md object-center"
+                    className="w-full h-full object-cover rounded-sm object-center"
                     src={project.ProjectAssets[3]}
                     muted
                     autoPlay
@@ -798,7 +798,7 @@ const TOVOProjectTable = ({ project }) => {
               {project.ProjectAssets.length > 0 && project.ProjectAssets[3] ? (
                 project.ProjectAssets[3].type === "video/mp4" ? (
                   <video
-                    className="w-full  object-cover rounded-md object-center"
+                    className="w-full  object-cover rounded-sm object-center"
                     src={project.ProjectAssets[3]}
                     muted
                     autoPlay
@@ -826,7 +826,7 @@ const TOVOProjectTable = ({ project }) => {
         <div
           className={`Smartliving 
           items-center justify-center flex  w-full mt-${isMobile ? "4" : "6"
-            } overflow-hidden rounded-md ${isMobile ? "h-[60vh]" : "h-screen -mt-16"}`}
+            } overflow-hidden rounded-sm ${isMobile ? "h-[60vh]" : "h-screen -mt-16"}`}
         >
           <div
             className={`w-full ${isMobile
@@ -842,7 +842,7 @@ const TOVOProjectTable = ({ project }) => {
               {project.ProjectAssets.length > 0 && project.ProjectAssets[4] ? (
                 project.ProjectAssets[4].type === "video/mp4" ? (
                   <video
-                    className="w-full h-full object-cover rounded-md object-center"
+                    className="w-full h-full object-cover rounded-sm object-center"
                     src={project.ProjectAssets[4]}
                     muted
                     autoPlay
@@ -870,7 +870,7 @@ const TOVOProjectTable = ({ project }) => {
                   project.ProjectAssets[5] ? (
                   project.ProjectAssets[5].type === "video/mp4" ? (
                     <video
-                      className="w-full h-full object-cover rounded-md object-center"
+                      className="w-full h-full object-cover rounded-sm object-center"
                       src={project.ProjectAssets[5]}
                       muted
                       playsInline
@@ -893,7 +893,7 @@ const TOVOProjectTable = ({ project }) => {
                   project.ProjectAssets[6] ? (
                   project.ProjectAssets[6].type === "video/mp4" ? (
                     <video
-                      className="w-full h-full object-cover rounded-md object-center"
+                      className="w-full h-full object-cover rounded-sm object-center"
                       src={project.ProjectAssets[6]}
                       muted
                       autoPlay
@@ -917,7 +917,7 @@ const TOVOProjectTable = ({ project }) => {
       {/* page 5*/}
       <div
         className={`smartliving flex justify-center items-center  w-full mt-${isMobile ? "4" : "6"
-          } overflow-hidden rounded-md ${isMobile ? "h-[60vh]" : "h-screen -mt-16"}`}
+          } overflow-hidden rounded-sm ${isMobile ? "h-[60vh]" : "h-screen -mt-16"}`}
       >
         <div
           className={`w-full ${isMobile
@@ -934,7 +934,7 @@ const TOVOProjectTable = ({ project }) => {
               {project.ProjectAssets.length > 0 && project.ProjectAssets[7] ? (
                 project.ProjectAssets[7].type === "video/mp4" ? (
                   <video
-                    className="w-full h-full object-cover rounded-md object-center"
+                    className="w-full h-full object-cover rounded-sm object-center"
                     src={project.ProjectAssets[7]}
                     muted
                     autoPlay
@@ -956,7 +956,7 @@ const TOVOProjectTable = ({ project }) => {
               {project.ProjectAssets.length > 0 && project.ProjectAssets[8] ? (
                 project.ProjectAssets[8].type === "video/mp4" ? (
                   <video
-                    className="w-full h-full object-cover rounded-md object-center"
+                    className="w-full h-full object-cover rounded-sm object-center"
                     src={project.ProjectAssets[8]}
                     muted
                     autoPlay
@@ -983,7 +983,7 @@ const TOVOProjectTable = ({ project }) => {
             {project.ProjectAssets.length > 0 && project.ProjectAssets[9] ? (
               project.ProjectAssets[9].type === "video/mp4" ? (
                 <video
-                  className="w-full h-full object-cover rounded-md object-center"
+                  className="w-full h-full object-cover rounded-sm object-center"
                   src={project.ProjectAssets[9]}
                   muted
                   autoPlay
@@ -1008,7 +1008,7 @@ const TOVOProjectTable = ({ project }) => {
         <div
           className={`smartliving 
           items-center justify-center flex  w-full mt-${isMobile ? "4" : "6"
-            } overflow-hidden rounded-md ${isMobile ? "h-[60vh]" : "h-screen -mt-16"}`}
+            } overflow-hidden rounded-sm ${isMobile ? "h-[60vh]" : "h-screen -mt-16"}`}
         >
           <div
             className={`w-full ${isMobile
@@ -1024,7 +1024,7 @@ const TOVOProjectTable = ({ project }) => {
               {project.ProjectAssets.length > 0 && project.ProjectAssets[10] ? (
                 project.ProjectAssets[10].type === "video/mp4" ? (
                   <video
-                    className="w-full h-full object-cover rounded-md object-center"
+                    className="w-full h-full object-cover rounded-sm object-center"
                     src={project.ProjectAssets[10]}
                     muted
                     autoPlay
@@ -1052,7 +1052,7 @@ const TOVOProjectTable = ({ project }) => {
                   project.ProjectAssets[11] ? (
                   project.ProjectAssets[11].type === "video/mp4" ? (
                     <video
-                      className="w-full h-full object-cover rounded-md object-center"
+                      className="w-full h-full object-cover rounded-sm object-center"
                       src={project.ProjectAssets[11]}
                       muted
                       autoPlay
@@ -1075,7 +1075,7 @@ const TOVOProjectTable = ({ project }) => {
                   project.ProjectAssets[12] ? (
                   project.ProjectAssets[12].type === "video/mp4" ? (
                     <video
-                      className="w-full h-full object-cover rounded-md object-center"
+                      className="w-full h-full object-cover rounded-sm object-center"
                       src={project.ProjectAssets[12]}
                       muted
                       autoPlay
@@ -1100,7 +1100,7 @@ const TOVOProjectTable = ({ project }) => {
       {/* page 7*/}
       <div
         className={`smartliving w-full  ${isMobile ? " h-[65vh]" : " h-screen -mt-16 "
-          } mt-${isMobile ? "4 " : "6"} overflow-hidden rounded-md  `}
+          } mt-${isMobile ? "4 " : "6"} overflow-hidden rounded-sm  `}
       >
         <div className=" h-full flex justify-end  w-full">
           <div
@@ -1110,7 +1110,7 @@ const TOVOProjectTable = ({ project }) => {
             {project.ProjectAssets.length > 0 && project.ProjectAssets[13] ? (
               isVideoFile(project.ProjectAssets[13]) ? (
                 <video
-                  className="w-fit h-4/5 object-cover rounded-md object-center"
+                  className="w-fit h-4/5 object-cover rounded-sm object-center"
                   src={project.ProjectAssets[13]}
                   muted
                   autoPlay
