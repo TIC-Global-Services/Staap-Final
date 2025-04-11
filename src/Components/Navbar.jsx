@@ -795,7 +795,7 @@ const BottomNav = () => {
             <div className=" flex justify-between items-center">
               <div className="part2 -ml-3">
                 <button className={` text-[11px] capitalize`}>
-                  @2021-2025
+                  &copy; 2021-2025
                   <span className="inline-block ml-1">Staap / All Rights Reserved</span>
                 </button>
               </div>
@@ -810,7 +810,7 @@ const BottomNav = () => {
             <div className="w-[55%] flex justify-between items-center">
               <div className="part2 -ml-3">
                 <button className={` text-[11px]  capitalize`}>
-                  @2021-2025
+                &copy; 2021-2025
                   <span className="inline-block ml-1">Staap / All Rights Reserved</span>
                 </button>
               </div>
@@ -867,7 +867,7 @@ const BottomNav = () => {
 
         <div className="flex text-zinc-500 mt-1 justify-between items-center">
           <button className="text-[10px] capitalize">
-            ® 2021-2025
+           &copy; 2021-2025
             <span className="inline-block  ml-1">Staap / All Rights Reserved</span>
           </button>
 
