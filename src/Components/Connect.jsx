@@ -316,7 +316,7 @@ const Connect = () => {
 
               </div>
               
-              <h5 className="text-[15px] -mt-3 leading-none font-normal">+91-9994192333</h5>
+              <a href="tel:+91-9994192333" className="text-[15px] -mt-3 leading-none font-normal">+91-9994192333</a>
 
 
             </div>

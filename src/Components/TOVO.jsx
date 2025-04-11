@@ -861,11 +861,11 @@ const TOVOProjectTable = ({ project }) => {
             </div>
 
             <div
-              className={`2img 
-          ${isMobile ? "w-[101.5%] h-1/2 mt-2 gap-1" : "w-2/5 h-[80%] gap-2"} 
+              className={` 
+          ${isMobile ? "w-full h-1/2 mt-2 gap-1" : "w-2/5 h-full gap-2"} 
           flex  justify-between items-center`}
             >
-              <div className="img-big2 w-1/2 flex justify-center  overflow-hidden rounded-sm">
+              <div className="img-big2 w-1/2 h-full flex justify-center  overflow-hidden rounded-sm">
                 {project.ProjectAssets.length > 0 &&
                   project.ProjectAssets[5] ? (
                   project.ProjectAssets[5].type === "video/mp4" ? (
@@ -914,6 +914,7 @@ const TOVOProjectTable = ({ project }) => {
           </div>
         </div>
       </div>
+
       {/* page 5*/}
       <div
         className={`smartliving flex justify-center items-center  w-full mt-${isMobile ? "4" : "6"
@@ -926,8 +927,8 @@ const TOVOProjectTable = ({ project }) => {
             }`}
         >
           <div
-            className={`2img 
-         ${isMobile ? "w-[101.5%]  h-1/2 mt-2 gap-1" : "w-2/5 h-[80%] gap-2 "}
+            className={` 
+         ${isMobile ? "w-full   h-1/2  gap-1" : "w-2/5 h-full gap-2 "}
            w-2/5 h-[80%] flex  justify-between items-center`}
           >
             <div className="img-big2 w-1/2 h-full  flex justify-center overflow-hidden rounded-sm">
@@ -976,7 +977,7 @@ const TOVOProjectTable = ({ project }) => {
           </div>
 
           <div
-            className={`img-big1 w-1/2 h-full flex justify-end overflow-hidden rounded-sm          
+            className={`img-big2 mt-4 w-1/2 h-full  flex justify-end overflow-hidden rounded-sm          
           ${isMobile ? "w-full h-1/2 mt-2" : "w-1/2 h-full "}
            `}
           >
@@ -1044,7 +1045,7 @@ const TOVOProjectTable = ({ project }) => {
 
             <div
               className={`2img 
-          ${isMobile ? "w-[101.5%]  h-1/2  mt-2 gap-1 " : "w-2/5 h-[80%] gap-2 "} 
+          ${isMobile ? "w-full  h-1/2  mt-4 gap-1 " : "w-2/5 h-full gap-2 "} 
           flex  justify-between items-center`}
             >
               <div className="img-big2 w-1/2 h-full flex justify-center overflow-hidden rounded-sm">
