@@ -197,7 +197,7 @@ export const projectsData = [
     location: "Creek Harbour, Dubai, +12 outlets all over India",
     typology: "Hospitality",
     status: "Ongoing",
-    year: "2023-2024",
+    year: "2023-2025",
     buildArea: null,
     siteArea:"1,500 - 3,500 Sq.ft / Outlet",
     bgColor:"#fff",

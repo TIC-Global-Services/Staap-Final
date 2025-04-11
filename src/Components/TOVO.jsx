@@ -835,8 +835,8 @@ const TOVOProjectTable = ({ project }) => {
               }`}
           >
             <div
-              className={`img-big1 
-          ${isMobile ? "w-full h-1/2" : "w-1/2 h-full "
+              className={`img-big2 
+          ${isMobile ? "w-[99%] h-1/2" : "w-1/2 h-full "
                 } flex justify-start overflow-hidden rounded-sm`}
             >
               {project.ProjectAssets.length > 0 && project.ProjectAssets[4] ? (
@@ -851,7 +851,7 @@ const TOVOProjectTable = ({ project }) => {
                   />
                 ) : (
                   <img
-                    className="w-1/2 h-full object-fill rounded-sm object-center"
+                    className=" w-1/2 h-full object-cover rounded-sm object-center"
                     src={project.ProjectAssets[4] || "/placeholder.svg"}
                     alt={project.name}
                     srcSet={project.ProjectAssets[4]}
@@ -993,7 +993,7 @@ const TOVOProjectTable = ({ project }) => {
                 />
               ) : (
                 <img
-                  className="w-1/2 h-full object-fill rounded-sm object-center"
+                  className="w-1/2 h-full object-cover rounded-sm object-center"
                   src={project.ProjectAssets[9] || "/placeholder.svg"}
                   alt={project.name}
                   srcSet={project.ProjectAssets[9]}

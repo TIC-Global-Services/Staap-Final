@@ -257,7 +257,7 @@ const R320 = () => {
                   />
                 ) : (
                   <img
-                    className="w-full h-full  object-fit  rounded-sm object-center"
+                    className="w-full h-full  object-cover  rounded-sm object-center"
                     src={project.ProjectAssets[4] || "/placeholder.svg"}
                     alt={project.name}
                   />

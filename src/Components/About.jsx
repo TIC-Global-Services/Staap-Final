@@ -94,7 +94,7 @@ const About = () => {
       >
         {/* {desktop responsive part1} */}
         <div
-          className={`part1 ${isMobile ? "hidden" : "visible"}  relative h-[24%] w-full pb-  ${
+          className={`part1 ${isMobile ? "hidden" : "visible"}  relative h-[24%] w-full pb-4  ${
             isDarkMode ? "border-b-[0.2px] border-zinc-700" : "border-b-[0.2px] border-zinc-400"
           } `}
         >
