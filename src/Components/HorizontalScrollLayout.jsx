@@ -47,7 +47,7 @@ const HorizontalScrollLayout = () => {
     if (!isMobile) {
       // gsap.set(slideContainerRef.current, { x: "0%" })
       // gsap.set(connectSectionRef.current, { translateY: "100%" })
-      
+
       if (currentSection <= 1) {
         gsap.set(slideContainerRef.current, { x: `-${currentSection * 100}%` })
         gsap.set(connectSectionRef.current, { translateY: "100%" })
@@ -136,7 +136,7 @@ const HorizontalScrollLayout = () => {
     const currentEl = mobileContainerRef.current?.querySelector(`#${sections[mobileMountedIndex].id}`)
     if (currentEl) {
       gsap.to(currentEl, {
-        opacity:0,
+        opacity: 0,
         duration: 0.7,
         ease: "power2.out",
         onComplete: () => {
@@ -235,86 +235,104 @@ const HorizontalScrollLayout = () => {
     }
   }, [isMobile])
 
-  // Handle touch events for mobile and desktop
+  // Device-specific touch navigation implementation
   // useEffect(() => {
-  //   let touchStartX = 0
-  //   let touchStartY = 0
-  //   let touchEndX = 0
-  //   let touchEndY = 0
-  //   let startTime = 0
+  //   let touchStartX = 0;
+  //   let touchStartY = 0;
+  //   let touchEndX = 0;
+  //   let touchEndY = 0;
+  //   let startTime = 0;
 
-  //   // const handleTouchStart = (e) => {
-  //   //   touchStartX = e.changedTouches[0].screenX
-  //   //   touchStartY = e.changedTouches[0].screenY
-  //   //   startTime = new Date().getTime()
-  //   // }
+  //   const handleTouchStart = (e) => {
+  //     touchStartX = e.changedTouches[0].clientX;
+  //     touchStartY = e.changedTouches[0].clientY;
+  //     startTime = new Date().getTime();
+  //   };
 
-  //   // const handleTouchEnd = (e) => {
-  //   //   if (e.target instanceof Element && e.target.closest(".disable-horizontal-scroll")) return
+  //   const handleTouchEnd = (e) => {
+  //     if (isScrolling) return;
 
-  //   //   touchEndX = e.changedTouches[0].screenX
-  //   //   touchEndY = e.changedTouches[0].screenY
+  //     touchEndX = e.changedTouches[0].clientX;
+  //     touchEndY = e.changedTouches[0].clientY;
 
-  //   //   const deltaX = touchEndX - touchStartX
-  //   //   const deltaY = touchEndY - touchStartY
-  //   //   const elapsedTime = new Date().getTime() - startTime
+  //     const deltaX = touchEndX - touchStartX;
+  //     const deltaY = touchEndY - touchStartY;
+  //     const elapsedTime = new Date().getTime() - startTime;
 
-  //   //   if (isMobile) {
-  //   //     if (Math.abs(deltaY) > 50 && elapsedTime < 300) {
-  //   //       if (deltaY > 0) {
-  //   //         scrollToSection(currentSection - 1)
-  //   //       } else {
-  //   //         scrollToSection(currentSection + 1)
-  //   //       }
-  //   //     }
-  //   //   } else {
-  //   //     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50 && elapsedTime < 300) {
-  //   //       if (deltaX < 0) {
-  //   //         scrollToSection(currentSection + 1)
-  //   //       } else {
-  //   //         scrollToSection(currentSection - 1)
-  //   //       }
-  //   //     }
-  //   //   }
-  //   // }
+  //     // Minimum distance required to register as a swipe
+  //     const minDistance = 50;
+  //     // Maximum time for a touch to count as a swipe
+  //     const maxTime = 300;
 
-  //   // const handleTouchMove = (e) => {
-  //   //   if (e.target instanceof Element && e.target.closest(".disable-horizontal-scroll")) return
-  //   //   e.preventDefault()
-  //   // }
+  //     if (isMobile) {
+  //       // Mobile: Use horizontal swipe (left-right)
+  //       if (Math.abs(deltaX) > minDistance && elapsedTime < maxTime) {
+  //         console.log("Mobile horizontal swipe detected:", deltaX > 0 ? "right" : "left");
 
-  //   const container = containerRef.current
+  //         if (deltaX > 0 && currentSection > 0) {
+  //           // Swipe right - go to previous section
+  //           scrollToSection(currentSection - 1);
+  //         } else if (deltaX < 0 && currentSection < sections.length - 1) {
+  //           // Swipe left - go to next section
+  //           scrollToSection(currentSection + 1);
+  //         }
+  //       }
+  //     } else {
+  //       // Desktop: Use vertical swipe (top-down)
+  //       if (Math.abs(deltaY) > minDistance && elapsedTime < maxTime) {
+  //         console.log("Desktop vertical swipe detected:", deltaY > 0 ? "down" : "up");
+
+  //         if (deltaY > 0 && currentSection > 0) {
+  //           // Swipe down - go to previous section
+  //           scrollToSection(currentSection - 1);
+  //         } else if (deltaY < 0 && currentSection < sections.length - 1) {
+  //           // Swipe up - go to next section
+  //           scrollToSection(currentSection + 1);
+  //         }
+  //       }
+  //     }
+  //   };
+
+  //   const handleTouchMove = (e) => {
+  //     // Allow default scrolling in elements with the disable-touch-scroll class
+  //     if (e.target.closest(".disable-touch-scroll")) {
+  //       return;
+  //     }
+
+  //     if (isMobile) {
+  //       // For mobile, prevent horizontal scrolling
+  //       const touch = e.touches[0];
+  //       const deltaX = touch.clientX - touchStartX;
+  //       const deltaY = touch.clientY - touchStartY;
+
+  //       // Only prevent default if horizontal movement is dominant
+  //       if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  //         e.preventDefault();
+  //       }
+  //     } else {
+  //       // For desktop, prevent vertical scrolling
+  //       e.preventDefault();
+  //     }
+  //   };
+
+  //   const container = containerRef.current;
   //   if (container) {
-  //     container.addEventListener("touchstart", handleTouchStart, { passive: true })
-  //     container.addEventListener("touchend", handleTouchEnd, { passive: true })
-  //     container.addEventListener("touchmove", handleTouchMove, { passive: false })
+  //     // Add the event listeners
+  //     container.addEventListener("touchstart", handleTouchStart, { passive: true });
+  //     container.addEventListener("touchend", handleTouchEnd, { passive: true });
+  //     container.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+  //     console.log("Device-specific touch navigation listeners added");
   //   }
 
   //   return () => {
   //     if (container) {
-  //       container.removeEventListener("touchstart", handleTouchStart)
-  //       container.removeEventListener("touchend", handleTouchEnd)
-  //       container.removeEventListener("touchmove", handleTouchMove)
+  //       container.removeEventListener("touchstart", handleTouchStart);
+  //       container.removeEventListener("touchend", handleTouchEnd);
+  //       container.removeEventListener("touchmove", handleTouchMove);
   //     }
-  //   }
-  // }, [currentSection, scrollToSection, isMobile])
-
-  // Navigation dots component (works for both desktop and mobile)
-
-  // const NavigationDots = () => (
-  //   <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 flex gap-2">
-  //     {sections.map((_, index) => (
-  //       <button
-  //         key={index}
-  //         className={`w-3 h-3 rounded-full transition-all duration-300 ${
-  //           currentSection === index ? "bg-primary scale-125" : "bg-gray-400 hover:bg-gray-600"
-  //         }`}
-  //         onClick={() => scrollToSection(index)}
-  //         aria-label={`Go to section ${index + 1}`}
-  //       />
-  //     ))}
-  //   </div>
-  // )
+  //   };
+  // }, [currentSection, scrollToSection, isScrolling, isMobile]);
 
   return (
     <div className="h-screen w-screen overflow-hidden" ref={containerRef}>
@@ -347,9 +365,8 @@ const HorizontalScrollLayout = () => {
               <About />
             </div>
             <div
-              className={`h-screen w-full absolute top-0 left-0 z-20 ${
-                isDarkMode ? "bg-black" : "bg-white"
-              } translate-y-full`}
+              className={`h-screen w-full absolute top-0 left-0 z-20 ${isDarkMode ? "bg-black" : "bg-white"
+                } translate-y-full`}
               id="connect"
               ref={(el) => {
                 sectionsRef.current[3] = el
