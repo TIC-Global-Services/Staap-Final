@@ -172,7 +172,7 @@ const Project = () => {
   }
 
   const getBorderClass = (name) => {
-    if (["R320", "MADE IN"].includes(name)) return "border-t-[0.2px] border-zinc-100";
+    if (["R320", "MADE IN", "Smart Living"].includes(name)) return "border-t-[0.2px] border-zinc-100";
     if (["TOVO", "Panache", "FOLD"].includes(name)) return "border-t-[0.2px] border-zinc-700";
     return "";
   };
