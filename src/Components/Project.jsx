@@ -240,7 +240,7 @@ const Project = () => {
       {/* Desktop version */}
       <div
         style={{ backgroundColor: project.bgColor }}
-        className={`${isMobile ? "hidden" : "block"} w-full pt-24 pb-4 mt-3 overflow-y-auto h-dvh`}
+        className={`${isMobile ? "hidden" : "block"} w-full pt-24 pb-4 mt-3 overflow-y-auto min-h-dvh`}
         ref={containerRef}
       >
         <div className="w-full flex justify-end items-center   px-3  ">
