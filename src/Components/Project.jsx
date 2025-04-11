@@ -172,7 +172,7 @@ const Project = () => {
   }
 
   const getBorderClass = (name) => {
-    if (name === "R320") return "border-t-[0.2px] border-zinc-100";
+    if (["R320", "MADE IN"].includes(name)) return "border-t-[0.2px] border-zinc-100";
     if (["TOVO", "Panache", "FOLD"].includes(name)) return "border-t-[0.2px] border-zinc-700";
     return "";
   };
@@ -442,11 +442,11 @@ const Project = () => {
               <h5 className={` ${project.name === "R320" ? " text-white " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? "text-black " : "text-white"} text-[18px]  leading-6 `}>
                 We're excited to hear what you've been imagining.
                 <br />
-                Let's bring your vision to life. Reach out to us at
+                Let's bring your vision to life. Reach out to us at  
                 <br />
                 <button>
-                  <a className={``} href="" target="_blank" rel="noreferrer">
-                    write@staap
+                  <a className={``} href="mailto:write@staap.in" target="_blank" rel="noreferrer">
+                    write@staap.in
                   </a>
                 </button>
                 .
@@ -626,7 +626,7 @@ const Project = () => {
         {/* related works table */}
 
         <div className=" w-screen mt-24 h-fit  pl-3 pr-3  ">
-          <div className="realted_work_section  h-fit w-full pt-1 pb-4 border-b-[0.2px]  border-t-[0.2px] ">
+          <div className={`realted_work_section  h-fit w-full pt-1 pb-4 border-b-[0.2px]  border-t-[0.2px] ${getBorderClass(project.name)}`}>
             <div className="text-[11px] h-full  w-full font-medium flex-col justify-between ">
               {/* Left Column: Title and Image container */}
               <div className="w-full  text-left relative">
@@ -714,8 +714,8 @@ const Project = () => {
                 We're excited to hear what you've been imagining.
                 Let's bring your vision to life. Reach out to us at
                 <button>
-                  <a className={`${project.name === "R320" ? " text-white hover:text-black " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? " text-zinc-400 hover:text-black " : "text-zinc-400 hover:text-white"} `} href="mailto:write@staap.in" target="_blank" rel="noreferrer">
-                    write@staap.in
+                  <a className={` ml-1 ${project.name === "R320" ? " text-white hover:text-black " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? " text-zinc-400 hover:text-black " : "text-zinc-400 hover:text-white"} `} href="mailto:write@staap.in" target="_blank" rel="noreferrer">
+                   write@staap.in
                   </a>
                 </button>
 
