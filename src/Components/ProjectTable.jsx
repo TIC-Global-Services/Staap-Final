@@ -187,31 +187,31 @@ const ProjectTable = ({ theme }) => {
 
   const [bottomValue, setBottomValue] = useState("200px")
 
-useEffect(() => {
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  
-  if (isIOS) {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    const isChrome = /CriOS/i.test(navigator.userAgent); // Detect Chrome on iOS
-    
-    if (isChrome) {
-      setBottomValue("245px"); // Special case for iOS Chrome
-    } else if (isSafari) {
-      setBottomValue("220px"); // Safari on iOS
+  useEffect(() => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    if (isIOS) {
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      const isChrome = /CriOS/i.test(navigator.userAgent); // Detect Chrome on iOS
+
+      if (isChrome) {
+        setBottomValue("245px"); // Special case for iOS Chrome
+      } else if (isSafari) {
+        setBottomValue("220px"); // Safari on iOS
+      } else {
+        setBottomValue("220px"); // Other browsers on iOS
+      }
     } else {
-      setBottomValue("220px"); // Other browsers on iOS
+      setBottomValue("200px"); // Non-iOS devices
     }
-  } else {
-    setBottomValue("200px"); // Non-iOS devices
-  }
 
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 640)
-  }
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640)
+    }
 
-  window.addEventListener("resize", handleResize)
-  return () => window.removeEventListener("resize", handleResize)
-}, [])
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   // Device detection (you might want to refine this check based on your needs)
   // const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -235,10 +235,10 @@ useEffect(() => {
             <tr
               style={isMobile ? { bottom: bottomValue } : {}}
               className={`flex ${isMobile
-                  ? isDarkMode
-                    ? "bg-black absolute leading-6 left-1/2 -translate-x-1/2 -translate-y-1/2 pb-1  h-fit pt-1 z-50 w-full text-[14px] custom-bottom"
-                    : "bg-white absolute leading-6 left-1/2 -translate-x-1/2 -translate-y-1/2  pb-1 h-fit pt-1  z-50 w-full text-[14px] custom-bottom"
-                  : ""
+                ? isDarkMode
+                  ? "bg-black absolute leading-6 left-1/2 -translate-x-1/2 -translate-y-1/2 pb-1  h-fit pt-1 z-50 w-full text-[14px] custom-bottom"
+                  : "bg-white absolute leading-6 left-1/2 -translate-x-1/2 -translate-y-1/2  pb-1 h-fit pt-1  z-50 w-full text-[14px] custom-bottom"
+                : ""
                 } font-normal justify-between items-center`}
             >
               <th
@@ -315,8 +315,8 @@ useEffect(() => {
                 >
                   <div
                     className={`block pb-14 ${showAllImages
-                        ? "overflow-x-auto overflow-y-auto"
-                        : "overflow-x-hidden"
+                      ? "overflow-x-auto overflow-y-auto"
+                      : "overflow-x-hidden"
                       }`}
                   >
                     {!showAllImages ? (
@@ -478,14 +478,17 @@ useEffect(() => {
         } ${theme ? "text-white/40" : "text-black/50"
           } shrink-0 mt-5 md:mt-0 pt-6 flex flex-col justify-between overflow-hidden`}
       >
-        <div className="img-prev-container  min-h-[64%] max-h-[64%] -mb-10  shrink-0 w-full rounded-[4px] overflow-hidden">
-          <img
-            className="h-full w-full object-cover object-center shrink-0 overflow-y-clip"
-            src={hoveredImage ? hoveredImage.src : `${isDarkMode ? "/placeholder.jpg" : "/placeholder-white.jpg"}`}
-            alt={hoveredImage ? hoveredImage.name : `${isDarkMode ? "/placeholder.jpg" : "/placeholder-white.jpg"}`}
-            srcSet={hoveredImage ? hoveredImage.srcSet : `${isDarkMode ? "/placeholder.jpg" : "/placeholder-white.jpg"}`}
-          />
+        <div className="img-prev-container min-h-[64%] max-h-[64%] -mb-10 shrink-0 w-full rounded-[4px] overflow-hidden">
+          {hoveredImage && (
+            <img
+              className="h-full w-full object-cover object-center shrink-0 overflow-y-clip"
+              src={hoveredImage.src}
+              alt={hoveredImage.name}
+              srcSet={hoveredImage.srcSet}
+            />
+          )}
         </div>
+
 
         <div className="img-text w-full mt-12 mb-1.5  flex flex-col md:flex-row justify-between items-end text-end leading-4">
           <div className="w-full md:w-[40%]  flex-col items-start h-full text-left whitespace-nowrap">
