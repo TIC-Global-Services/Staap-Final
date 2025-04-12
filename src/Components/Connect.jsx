@@ -429,13 +429,13 @@ const Connect = () => {
                   </button>
                 </div>
 
-                <div className="flex flex-col  items-start   ">
+                <div className="flex flex-col  items-end   ">
                   <p className=" text-[12px] text-zinc-400  capitalize">
                     Add us on
                   </p>
                   <button>
                     <a
-                      className=" capitalize text-zinc-400 pt-1 "
+                      className=" capitalize text-zinc-400 pt-1"
                       href="https://in.linkedin.com/company/staapin"
                       target="_blank"
                     >
