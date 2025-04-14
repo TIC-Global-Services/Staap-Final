@@ -29,23 +29,20 @@ const Connect = () => {
           WebkitOverflowScrolling: Touch,
           overscrollBehavior: "contain",
         }}
-        className={`contact-container  ${
-          isMobile
-            ? "pt-20  pb-24  overflow-y-auto max-h-screen touch-pan-y "
-            : "pt-24 overflow-hidden"
-        }`}
+        className={`contact-container  ${isMobile
+          ? "pt-20  pb-24  overflow-y-auto max-h-screen touch-pan-y "
+          : "pt-24 overflow-hidden"
+          }`}
       >
         <div
-          className={`part1 h-fit w-full mt-[6px] pb-2  ${
-            isDarkMode
-              ? "border-b-[0.2px] border-zinc-700"
-              : "border-b-[0.2px] border-zinc-400"
-          }  `}
+          className={`part1 h-fit w-full mt-[6px] pb-2  ${isDarkMode
+            ? "border-b-[0.2px] border-zinc-700"
+            : "border-b-[0.2px] border-zinc-400"
+            }  `}
         >
           <div
-            className={`text-[11px]  h-full w-full  ${
-              isMobile ? "flex-col  " : "flex"
-            } items-start  justify-between  text-left  `}
+            className={`text-[11px]  h-full w-full  ${isMobile ? "flex-col  " : "flex"
+              } items-start  justify-between  text-left  `}
           >
             <button
               className={`
@@ -55,9 +52,8 @@ const Connect = () => {
             </button>
 
             <div
-              className={` ${
-                isMobile ? "relative w-full mt-4 " : "w-[54.5%] relative  px-1 "
-              }   flex   items-start  text-[11px]   font-medium   text-zinc-400 `}
+              className={` ${isMobile ? "relative w-full mt-4 " : "w-[54.5%] relative  px-1 "
+                }   flex   items-start  text-[11px]   font-medium   text-zinc-400 `}
             >
               <div
                 className={`row1  h-full w-1/2                 
@@ -69,9 +65,8 @@ const Connect = () => {
                 >
                   {isMobile ? (
                     <h5
-                      className={`mb-2  w-full leading-3 ${
-                        isDarkMode ? "text-white" : "text-black"
-                      }`}
+                      className={`mb-2  w-full leading-3 ${isDarkMode ? "text-white" : "text-black"
+                        }`}
                     >
                       4/456, 2nd Main Rd, Chandrasekhar <br />
                       Avenue, Thoraipakkam,Chennai, Tamil <br />
@@ -79,9 +74,8 @@ const Connect = () => {
                     </h5>
                   ) : (
                     <h5
-                      className={`mb-2 leading-3  ${
-                        isDarkMode ? "text-white" : "text-black"
-                      }`}
+                      className={`mb-2 leading-3  ${isDarkMode ? "text-white" : "text-black"
+                        }`}
                     >
                       4/456, 2nd Main Rd, Chandrasekhar <br />
                       Avenue, Thoraipakkam,Chennai, <br />
@@ -108,33 +102,29 @@ const Connect = () => {
               </div>
 
               <div
-                className={`row1  h-full ${
-                  isMobile ? "w-[46%] " : "w-1/2"
-                }  `}
+                className={`row1  h-full ${isMobile ? "w-[46%] " : "w-1/2"
+                  }  `}
               >
                 <div
                   className={`w-fit  h-full flex-col  items-end justify-end   whitespace-break-spaces`}
                 >
                   <h5
-                    className={`mb-1 !text-zinc-400  ${
-                      isMobile ? "text-right -mb-1" : " text-left "
-                    } `}
+                    className={`mb-1 !text-zinc-400  ${isMobile ? "text-right -mb-1" : " text-left "
+                      } `}
                   >
                     Vendors and Collaborators
                   </h5>
 
                   <div
-                    className={` ${
-                      isMobile
-                        ? " flex w-full   text-right justify-end items-center "
-                        : "flex text-left justify-between items-center "
-                    }   ${
-                      isDarkMode ? " text-white" : " text-black"
-                    }   w-fit h-full  `}
+                    className={` ${isMobile
+                      ? " flex w-full   text-right justify-end items-center "
+                      : "flex text-left justify-between items-center "
+                      }   ${isDarkMode ? " text-white" : " text-black"
+                      }   w-fit h-full  `}
                   >
                     {isMobile ? (
                       <>
-                    
+
                         <p className="inline-block text-zinc-400">Reach Us At</p>
                         <button className={` leading-none  ml-2`}>
                           <a
@@ -142,7 +132,7 @@ const Connect = () => {
                             href="mailTo:work@staap.in"
                             target="_blank"
                           >
-                           work@staap.in
+                            work@staap.in
                           </a>
                         </button>
                       </>
@@ -162,23 +152,23 @@ const Connect = () => {
                       </>
                     )}
                   </div>
-        
-              {isMobile ?(
 
-                  <p
-                    className={` mt-14 w-full leading-none 
+                  {isMobile ? (
+
+                    <p
+                      className={` mt-14 w-full leading-none 
                     text-[11px] text-zinc-400  text-right `}
-                  >
-                    Working Hours 10 AM - 6 PM Monday to Friday
-                  </p>
-              ):(
+                    >
+                      Working Hours 10 AM - 6 PM Monday to Friday
+                    </p>
+                  ) : (
 
-                  <p  className={` text-left   mt-10
+                    <p className={` text-left   mt-10
                      text-[11px] text-zinc-400 `}
-                  >
-                    Working Hours <br />10 AM - 6 PM Monday to Friday
-                  </p>
-              )}
+                    >
+                      Working Hours <br />10 AM - 6 PM Monday to Friday
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -186,55 +176,46 @@ const Connect = () => {
         </div>
 
         <div
-          className={`part2 h-fit w-full ${
-            isMobile ? " pt-4" : "pt-20"
-          }  pb-3 ${
-            isDarkMode
+          className={`part2 h-fit w-full ${isMobile ? " pt-4" : "pt-20"
+            }  pb-3 ${isDarkMode
               ? "border-b-[0.2px] border-zinc-700"
               : "border-b-[0.2px] border-zinc-400"
-          }   `}
+            }   `}
         >
           <div className="h-full w-full  font-medium flex items-start  justify-between  text-left  ">
             <div
-              className={`${
-                isMobile ? "text-[13px] " : "text-[15px]"
-              } leading-4`}
+              className={`${isMobile ? "text-[13px] " : "text-[15px]"
+                } leading-4`}
             >
               <button>Careers</button>
               <p className={`text-[12px] text-zinc-400 `}>Join Us</p>
             </div>
 
             <div
-              className={`${
-                isMobile ? "w-3/4 pt-4 flex-col " : "w-[55%] "
-              } h-fit  p-3 flex  justify-start items-start  text-[11px]  text-left    `}
+              className={`${isMobile ? "w-3/4 pt-4 flex-col " : "w-[55%] "
+                } h-fit  p-3 flex  justify-start items-start  text-[11px]  text-left    `}
             >
               <div
-                className={`row1 flex   justify-between items-start ${
-                  isMobile ? "w-full" : "w-1/2 "
-                } `}
+                className={`row1 flex   justify-between items-start ${isMobile ? "w-full" : "w-1/2 "
+                  } `}
               >
                 <div
-                  className={`  h-full ${
-                    isMobile ? "w-full " : "w-1/2"
-                  }  whitespace-pre-wrap  text-left     `}
+                  className={`  h-full ${isMobile ? "w-full " : "w-1/2"
+                    }  whitespace-pre-wrap  text-left     `}
                 >
                   <h5 className=" leading-3 ">
-                    We’re always keen to connect with talented creatives. For
-                    future roles or freelance opportunities
+                    We’re always excited to connect with talented creatives. Reach out to us for opportunities or collaborations.
                   </h5>
                 </div>
               </div>
 
               <div
-                className={`row1 ${
-                  isMobile ? " flex mt-1 w-full " : "flex text-left"
-                }  justify-between w-1/2  `}
+                className={`row1 ${isMobile ? " flex mt-1 w-full " : "flex text-left"
+                  }  justify-between w-1/2  `}
               >
                 <div
-                  className={` ${
-                    isMobile ? " flex w-full  mt-2 " : "flex text-left"
-                  } justify-between  items-center w-fit h-full  `}
+                  className={` ${isMobile ? " flex w-full  mt-2 " : "flex text-left"
+                    } justify-between  items-center w-fit h-full  `}
                 >
                   <p className="inline-block text-zinc-400">Reach Us At</p>
 
@@ -251,9 +232,8 @@ const Connect = () => {
 
         {/* desktop version*/}
         <div
-          className={`part3 ${
-            isMobile ? " hidden pt-12 " : "pt-16 visible"
-          } h-fit w-full  pb-4   `}
+          className={`part3 ${isMobile ? " hidden pt-12 " : "pt-16 visible"
+            } h-fit w-full  pb-4   `}
         >
           <div
             className={` text-[11px] h-full w-full  font-medium flex items-start  justify-between  text-left  `}
@@ -264,64 +244,64 @@ const Connect = () => {
               </h5>
 
               <div className=" flex justify-center gap-10 items-start ">
-              <h5 className={` text-[15px] leading-4 font-normal `}>
-                Reach out to us at
-                <button>
-                  <a
-                    className="ml-2 "
-                    href="mailTo:Write@staap.in"
-                    target="_blank"
-                  >
-                    write@staap
-                  </a>
-                </button>
-                .in and let’s bring
-                <br />
-                your vision to life. We’re excited to hear what
-                <br />
-                you’ve been imagining.
-              </h5>
-
-              <div className=" flex-col  ">
-                <div className="flex flex-col  items-start  ">
-                  <p className={` text-[11px] text-zinc-400  capitalize  `}>
-                    Follow us on
-                  </p>
+                <h5 className={` text-[15px] leading-4 font-normal `}>
+                  Reach out to us at
                   <button>
                     <a
-                      className=" capitalize text-zinc-400 pt-1 "
-                      href="https://www.instagram.com/staap.in"
+                      className="ml-2 "
+                      href="mailTo:Write@staap.in"
                       target="_blank"
                     >
-                      [Instagram]
+                      write@staap
                     </a>
                   </button>
+                  .in and let’s bring
+                  <br />
+                  your vision to life. We’re excited to hear what
+                  <br />
+                  you’ve been imagining.
+                </h5>
+
+                <div className=" flex-col  ">
+                  <div className="flex flex-col  items-start  ">
+                    <p className={` text-[11px] text-zinc-400  capitalize  `}>
+                      Follow us on
+                    </p>
+                    <button>
+                      <a
+                        className=" capitalize text-zinc-400 pt-1 "
+                        href="https://www.instagram.com/staap.in"
+                        target="_blank"
+                      >
+                        [Instagram]
+                      </a>
+                    </button>
+                  </div>
+
+                  <div className="flex flex-col  items-start mt-2 ">
+                    <p className={` text-[11px] text-zinc-400  capitalize  `}>
+                      Add us on
+                    </p>
+                    <button>
+                      <a
+                        className=" capitalize text-zinc-400 pt-1 "
+                        href="https://in.linkedin.com/company/staapin"
+                        target="_blank"
+                      >
+                        [LinkedIn]
+                      </a>
+                    </button>
+                  </div>
                 </div>
 
-                <div className="flex flex-col  items-start mt-2 ">
-                  <p className={` text-[11px] text-zinc-400  capitalize  `}>
-                    Add us on
-                  </p>
-                  <button>
-                    <a
-                      className=" capitalize text-zinc-400 pt-1 "
-                      href="https://in.linkedin.com/company/staapin"
-                      target="_blank"
-                    >
-                      [LinkedIn]
-                    </a>
-                  </button>
-                </div>
               </div>
 
-              </div>
-              
               <a href="tel:+91-9994192333" className="text-[15px] -mt-3 leading-none font-normal">+91-9994192333</a>
 
 
             </div>
-              
-              
+
+
 
             <div
               className={`w-[55%] h-fit  flex  items-start  text-[11px] text-zinc-400 font-medium  text-left  px-2 `}
@@ -333,12 +313,7 @@ const Connect = () => {
                   </p>
 
                   <p className=" mt-1 text-justify leading-3 ">
-                    You, and your privacy, matter to us. We don’t engage in
-                    creepy practices like invasive data tracking,
-                    fingerprinting, or selling your information to third
-                    parties. We use Plausible, an open-source, cookie-free, an
-                    alytics tool that respects your privacy by not collecting
-                    personal data.
+                    You and your privacy matter to us. We don’t engage in invasive practices like data tracking, fingerprinting, or selling your information to third parties. We use Plausible, an open-source, cookie-free analytics tool that respects your privacy by not collecting personal data.
                   </p>
                 </div>
               </div>
@@ -352,9 +327,7 @@ const Connect = () => {
                   </p>
 
                   <p className="mt-1 text-justify leading-3">
-                    Architecture is a vast, ever-evolving land scape of ideas,
-                    spaces, and experiences. Thanks for exploring our little
-                    corner of design and creativity.
+                    Architecture is a vast, ever-evolving landscape of ideas, spaces, and experiences. Thanks for exploring our little corner of design and creativity.
                   </p>
                 </div>
 
@@ -384,15 +357,14 @@ const Connect = () => {
 
         {/* mobile responsive version */}
         <div
-          className={`part3 ${
-            isMobile ? "pt-3  visible" : "pt-16 hidden"
-          }  h-fit w-full  pb-20   `}
+          className={`part3 ${isMobile ? "pt-3  visible" : "pt-16 hidden"
+            }  h-fit w-full  pb-20   `}
         >
           <div className="text-[11px] h-full w-full  font-medium flex-col items-start  justify-between  text-left  ">
             <div className="flex w-full  flex-col gap-2  ">
- 
-            <h5 className="text-[15px] leading-4 font-normal">General Queries</h5>
-             
+
+              <h5 className="text-[15px] leading-4 font-normal">General Queries</h5>
+
               <h5 className=" text-[15px] whitespace-pre-wrap text-wrap leading-4 font-normal ">
                 Reach out to us at
                 <button>
@@ -411,8 +383,8 @@ const Connect = () => {
               </h5>
 
               <a href="tel:+91-9994192333" className="text-[15px] leading-none font-normal">+91-9994192333</a>
- 
-                 
+
+
               <div className=" mt-3  flex  gap-2 justify-between items-start ">
                 <div className="flex flex-col items-start  ">
                   <p className=" text-[12px] text-zinc-400  capitalize">
@@ -460,12 +432,7 @@ const Connect = () => {
                   <p className="text-zinc-400 text-[11px]">Privacy</p>
 
                   <p className=" mt-1   whitespace-break-spaces  text-balance   tracking-normal leading-3">
-                    You, and your privacy, matter to us. We don’t engage in
-                    creepy practices like invasive data tracking,
-                    fingerprinting, or selling your information to third
-                    parties. We use Plausible, an open-source, cookie-free, an
-                    alytics tool that respects your privacy by not collecting
-                    personal data.
+                    You and your privacy matter to us. We don’t engage in invasive practices like data tracking, fingerprinting, or selling your information to third parties. We use Plausible, an open-source, cookie-free analytics tool that respects your privacy by not collecting personal data.
                   </p>
                 </div>
               </div>
@@ -475,9 +442,7 @@ const Connect = () => {
                   <p className="text-zinc-400  text-[11px]">Thank you</p>
 
                   <p className="mt-1  whitespace-break-spaces  text-balance  tracking-normal  leading-3 ">
-                    Architecture is a vast, ever-evolving land scape of ideas,
-                    spaces, and experiences. Thanks for exploring our little
-                    corner of design and creativity.
+                    Architecture is a vast, ever-evolving landscape of ideas, spaces, and experiences. Thanks for exploring our little corner of design and creativity.
                   </p>
                 </div>
               </div>

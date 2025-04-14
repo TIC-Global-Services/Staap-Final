@@ -163,12 +163,12 @@ const TOVOProjectTable = ({ project }) => {
 
                         {hoveredImage.buildArea ? (
                           <>
-                            <p>Built up Area: {hoveredImage.buildArea} Sq.ft</p>
+                            <p>Built up Area: {hoveredImage.buildArea} </p>
                             <p>{hoveredImage.scope}</p>
                           </>
                         ) : (
                           <>
-                            <p>Built up Area: {project.buildArea} Sq.ft</p>
+                            <p>Built up Area: {project.buildArea}</p>
                             <p>{project.scope}</p>
                           </>
                         )}
@@ -391,14 +391,14 @@ const TOVOProjectTable = ({ project }) => {
                       
 
                       {hoveredImage.buildArea ? (
-                        <p>Built up Area: {hoveredImage.buildArea} Sq.ft</p>
+                        <p>Built up Area: {hoveredImage.buildArea}</p>
                       ) : (
-                        <p>Built up Area: {project.buildArea} Sq.ft</p>
+                        <p>Built up Area: {project.buildArea} </p>
                       )}
 
                       {hoveredImage.typology !== "Product" && hoveredImage.typology !== "Research" && (
                         <p className="w-full md:w-fit text-left   whitespace-nowrap text-nowrap tracking-tight md:my-0">
-                          Site Area: {hoveredImage.siteArea} Sq.ft
+                          Site Area: {hoveredImage.siteArea}
                         </p>
                       )}
                     </div>
@@ -426,9 +426,9 @@ const TOVOProjectTable = ({ project }) => {
                   <div className="w-full  mt-12 mb-1.5 flex flex-col md:flex-row justify-between items-end text-end leading-4">
                     <div className="w-full md:w-[40%] flex-col items-start h-full text-left whitespace-nowrap">
                       <p>{project.location}</p>
-                      <p>Built up Area: {project.buildArea} Sq.ft</p>
+                      <p>Built up Area: {project.buildArea} </p>
                     <p className="w-full md:w-fit text-center whitespace-nowrap text-nowrap tracking-tight md:my-0">
-                      Site Area: {project.siteArea} Sq.ft
+                      Site Area: {project.siteArea}
                     </p>
                     </div>
 

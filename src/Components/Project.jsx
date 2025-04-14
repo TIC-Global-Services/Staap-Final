@@ -240,7 +240,7 @@ const Project = () => {
       {/* Desktop version */}
       <div
         style={{ backgroundColor: project.bgColor }}
-        className={`${isMobile ? "hidden" : "block"} w-full pt-24 pb-4 mt-3 overflow-y-auto min-h-dvh`}
+        className={`${isMobile ? "hidden" : "block"} w-full pt-24 pb-4 mt-3 overflow-y-auto max-h-dvh`}
         ref={containerRef}
       >
         <div className="w-full flex justify-end items-center   px-3  ">
@@ -440,9 +440,9 @@ const Project = () => {
           <div className=" text-[11px] h-full w-full  font-medium flex items-start  justify-between  text-left  ">
             <div className="flex flex-col gap-1 ">
               <h5 className={` ${project.name === "R320" ? " text-white " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? "text-black " : "text-white"} text-[18px]  leading-6 `}>
-                We're excited to hear what you've been imagining.
+                Let's bring your vision to life. We're excited to hear
                 <br />
-                Let's bring your vision to life. Reach out to us at  
+                what you've been imagining. Reach out to us at
                 <br />
                 <button>
                   <a className={``} href="mailto:write@staap.in" target="_blank" rel="noreferrer">
@@ -715,7 +715,7 @@ const Project = () => {
                 Let's bring your vision to life. Reach out to us at
                 <button>
                   <a className={` ml-1 ${project.name === "R320" ? " text-white hover:text-black " : project.name === "TOVO" || project.name === "Panache" || project.name === "FOLD" ? " text-zinc-400 hover:text-black " : "text-zinc-400 hover:text-white"} `} href="mailto:write@staap.in" target="_blank" rel="noreferrer">
-                   write@staap.in
+                    write@staap.in
                   </a>
                 </button>
 

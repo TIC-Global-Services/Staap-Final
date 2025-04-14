@@ -361,7 +361,7 @@ const Navbar = () => {
               className={`absolute w-[100%] text-wrap  text-[11px] leading-3 
                 
                 ${isProjectR320
-                  ? "text-white"
+                  ? "text-white/60 hover:text-white"
                   : isProjectPagebgBlack && !isProjectPagebgwhite
                     ? "text-zinc-400 hover:text-white"
                     : isProjectPagebgwhite ? "text-zinc-400 hover:text-black"
@@ -382,7 +382,7 @@ const Navbar = () => {
             <p
               className={`
                 ${isProjectR320
-                  ? "text-white"
+                  ? "text-white/60 hover:text-white"
                   : isProjectPagebgBlack && !isProjectPagebgwhite
                     ? "text-zinc-400 hover:text-white"
                     : isProjectPagebgwhite ? "text-zinc-400 hover:text-black"
@@ -467,7 +467,7 @@ const Navbar = () => {
             <p
               className={`
           ${isProjectR320
-                  ? "text-white"
+                  ? "text-white/60 hover:text-white"
                   : isProjectPagebgBlack
                     ? "text-zinc-400 hover:text-white"
                     : isProjectPagebgwhite
@@ -810,7 +810,7 @@ const BottomNav = () => {
             <div className="w-[55%] flex justify-between items-center">
               <div className="part2 -ml-3">
                 <button className={` text-[11px]  capitalize`}>
-                &copy; 2021-2025
+                  &copy; 2021-2025
                   <span className="inline-block ml-1">Staap / All Rights Reserved</span>
                 </button>
               </div>
@@ -850,26 +850,38 @@ const BottomNav = () => {
                   <button
                     onClick={() => handleNavClick(index)}
                     key={index}
-                    className={`cursor-pointer flex-shrink-0 ${isDarkMode ? "text-zinc-100 hover:text-zinc-200" : "hover:text-black"
-                      } text-[14px] ${index === selectedIndex
-                        ? isDarkMode
-                          ? "text-zinc-200 font-medium"
-                          : "text-black font-medium"
-                        : "text-zinc-500"
+                    className={`cursor-pointer flex-shrink-0 text-[14px] 
+    ${index === selectedIndex
+                        ? "font-medium " + (isDarkMode ? "text-zinc-100" : "text-black")
+                        : isProjectR320
+                          ? "text-white/80"
+                          : isDarkMode
+                            ? "text-zinc-500 hover:text-zinc-200"
+                            : "text-zinc-500 hover:text-black"
                       }`}
                   >
                     [{link.name}]
                   </button>
+
                 )
             )}
           </div>
         </div>
 
         <div className="flex text-zinc-500 mt-1 justify-between items-center">
-          <button className="text-[10px] capitalize">
-           &copy; 2021-2025
-            <span className="inline-block  ml-1">Staap / All Rights Reserved</span>
+          <button
+            className={`text-[10px] capitalize 
+    ${isProjectR320
+                ? "text-white"
+                : isDarkMode
+                  ? "text-zinc-500"
+                  : "text-zinc-500"
+              }`}
+          >
+            &copy; 2021-2025
+            <span className="inline-block ml-1">Staap / All Rights Reserved</span>
           </button>
+
 
           {isProjectPage ? null : (
             <button onClick={toggleTheme} className="theme text-[11px] capitalize transform">

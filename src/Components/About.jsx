@@ -274,10 +274,10 @@ const About = () => {
 
                 <div className="w-[20%]   h-full text-left ">
                   <h5>[Designer]</h5>
-                  <h5>[Parametric]</h5>
+                  <h5>[Computational]</h5>
                   <h5>[Urban designer]</h5>
                   <h5>[Designer]</h5>
-                  <h5>[Creative]</h5>
+                  <h5>[Graphics]</h5>
                 </div>
               </div>
 

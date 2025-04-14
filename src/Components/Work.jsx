@@ -45,12 +45,7 @@ const Work = () => {
                   isDarkMode ? "text-white/40" : "text-black/50"
                 } w-full text-justify`}
             >
-              Throughout our four-year journey, we have successfully designed
-              and executed 26 projects, each reflecting our diverse expertise.
-              The works showcased here are a curated selection from our evolving
-              portfolio. For a more comprehensive look—including detailed
-              insights into each typology and our exclusive portfolio—please get
-              in touch with us.
+              Throughout our four-year journey, we have successfully designed and executed 18 projects, each reflecting the diversity of our expertise. The works showcased here are a selection from our portfolio. To discover more, including detailed insights into each typology and access to our exclusive portfolio, get in touch with us.
             </p>
           </div>
         </div>

@@ -129,7 +129,7 @@ export const projectsData = [
     ProjectAssets:[rvid,r2,r3,r4,r5,iso1,iso2,iso3,iso4,ele1,ele2,ele3,fac1,fac2,mb3,],
     bgColor:"#c6c2bf",
     navColor:"#c6c2bf",
-    team:"Mithun Adhitya, Karthik Keshav, Vinoth Kumar, Mithra Balasekaran",
+    team:"Mithun Adhitya, Karthik Keshav",
     desc: "R320, a design that unfolds in a smooth transition with the approach toward the structure just like the client desired it to be. The entirety of the spatial form is illustrated to get a complete picture of this design chapter with technical specifications and details.",
   },
   {

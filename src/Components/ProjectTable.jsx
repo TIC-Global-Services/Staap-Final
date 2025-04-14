@@ -496,8 +496,8 @@ const ProjectTable = ({ theme }) => {
 
             <p>
               {hoveredImage
-                ? hoveredImage.location.split(/\d/).length > 1
-                  ? hoveredImage.location.split(/\d/)[0].trim().replace(/[+,#,$]/g, '')
+                ? hoveredImage.location
+                  ? hoveredImage.location
                   : hoveredImage.location
                 : ""}
             </p>
