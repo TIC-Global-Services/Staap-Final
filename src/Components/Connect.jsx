@@ -245,21 +245,16 @@ const Connect = () => {
 
               <div className=" flex justify-center gap-10 items-start ">
                 <h5 className={` text-[15px] leading-4 font-normal `}>
-                  Reach out to us at
+                  Let's bring your vision to life. We're excited to hear
+                  <br />
+                  what you've been imagining. Reach out to us at
+                  <br />
                   <button>
-                    <a
-                      className="ml-2 "
-                      href="mailTo:Write@staap.in"
-                      target="_blank"
-                    >
-                      write@staap
+                    <a className={``} href="mailto:write@staap.in" target="_blank" rel="noreferrer">
+                      write@staap.in
                     </a>
                   </button>
-                  .in and let’s bring
-                  <br />
-                  your vision to life. We’re excited to hear what
-                  <br />
-                  you’ve been imagining.
+                  .
                 </h5>
 
                 <div className=" flex-col  ">
@@ -366,21 +361,19 @@ const Connect = () => {
               <h5 className="text-[15px] leading-4 font-normal">General Queries</h5>
 
               <h5 className=" text-[15px] whitespace-pre-wrap text-wrap leading-4 font-normal ">
-                Reach out to us at
+                Let's bring your vision to life. We're excited to hear
+                <br />
+                what you've been imagining. Reach out to us at
+                <br />
                 <button>
-                  <a
-                    className="ml-1"
-                    href="mailTo:Write@staap.in"
-                    target="_blank"
-                  >
-                    write@staap
+                  <a className={``} href="mailto:write@staap.in" target="_blank" rel="noreferrer">
+                    write@staap.in
                   </a>
                 </button>
-                .in and let’s bring your vision to life. We’re excited to hear
-                what
-                <br />
-                you’ve been imagining.
+                .
               </h5>
+
+
 
               <a href="tel:+91-9994192333" className="text-[15px] leading-none font-normal">+91-9994192333</a>
 

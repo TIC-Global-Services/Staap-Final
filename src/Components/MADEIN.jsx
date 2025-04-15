@@ -313,7 +313,7 @@ const MADEIN = () => {
         {/* smartliving page5 */}
         
         <div
-          className={`relative h-[140vh] w-full  -mt-11  flex  overflow-hidden items-center  px-3`}
+          className={`relative  w-full  -mt-11  flex  overflow-hidden items-center  px-3`}
         >
           {project ? (
             <div className="h-full w-full ">
@@ -342,7 +342,7 @@ const MADEIN = () => {
         {/* smartliving page5 */}
         
         <div
-          className={`relative h-[140vh] w-full  -mt-11  flex  overflow-hidden items-center  px-3`}
+          className={`relative  w-full  -mt-11  flex  overflow-hidden items-center  px-3`}
         >
           {project ? (
             <div className="h-full w-full ">
@@ -537,7 +537,7 @@ const MADEIN = () => {
       className={`smartliving w-full 
       } overflow-hidden rounded-md   `}
     >
-      <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">
+      <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
        
         {project.ProjectAssets.length > 0 && project.ProjectAssets[5] ? (
           isVideoFile(project.ProjectAssets[5]) ? (
@@ -566,12 +566,12 @@ const MADEIN = () => {
       className={`smartliving  w-full  
       } overflow-hidden rounded-md  `}
     >
-      <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">
+      <div className=" w-full  flex justify-center overflow-hidden rounded-sm ">
        
         {project.ProjectAssets.length > 0 && project.ProjectAssets[4] ? (
           isVideoFile(project.ProjectAssets[4]) ? (
             <video
-              className="w-full aspect-auto object-cover rounded-md object-center"
+              className="w-full object-cover rounded-md object-center"
               src={project.ProjectAssets[4]}
               muted
               autoPlay
