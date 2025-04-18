@@ -127,7 +127,7 @@ const MADEIN = () => {
     if (projectPageElement) {
       gsap.from(projectPageElement, {
         y: "54%",
-        duration: 1,
+        duration: 2,
         ease: "power1.in",
       });
     }
@@ -140,7 +140,7 @@ const MADEIN = () => {
     if (projectmobPageElement) {
       gsap.from(projectmobPageElement, {
         y: "62%",
-        duration: 1.3,
+        duration: 2.3,
         ease: "power1.in",
       });
     }
@@ -168,7 +168,7 @@ const MADEIN = () => {
       <div
         style={{ backgroundColor: project.bgColor }}
         className={`smartliving-desk w-full  
-          ${isMobile ? "hidden":"visible"}`}
+          ${isMobile ? "hidden" : "visible"}`}
         ref={containerRef}
       >
         {/*  landing page product*/}
@@ -179,7 +179,7 @@ const MADEIN = () => {
           <div className="flex flex-col ml-[50%] w-1/2 justify-start items-end">
             <div className="smartcontainer w-[55%]  aspect-[4/5] mt-4 rounded-sm overflow-hidden">
               {project.ProjectAssets.length > 0 &&
-              isVideoFile(project.ProjectAssets[0]) ? (
+                isVideoFile(project.ProjectAssets[0]) ? (
                 <video
                   className="w-full h-full object-fit rounded-md object-center"
                   src={project.ProjectAssets[0]}
@@ -199,27 +199,42 @@ const MADEIN = () => {
             </div>
             <div className="w-[55%]  mt-4  font-medium h-full text-left">
               <div
-                className={`img-text w-full    text-zinc-500  items-end flex flex-col justify-start text-[11px] leading-none`}
+                className={`img-text w-full   ${project.name === "R320" || project.name === "TOVO"
+                  ? " text-white"
+                  : "text-zinc-400"
+                  }  items-end flex flex-col justify-start text-[11px] leading-none`}
               >
                 <div className="h-1/2 w-full flex justify-between items-center ">
-                  <h5 className="font-medium  whitespace-nowrap text-left">
-                    Built up Area : {project.buildArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } font-medium !bg-transparent  whitespace-nowrap text-left`}>
+                    Built up Area : {project.buildArea}
                   </h5>
-                  <h5 className="whitespace-nowrap  text-right ">
-                    Site area: {project.siteArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  whitespace-nowrap !bg-transparent text-right `}>
+                    Site area: {project.siteArea}
                   </h5>
                 </div>
                 <div className=" h-1/2 w-full flex justify-between items-center">
-                  <h6 className="text-left mt-4 ">
+                  <h6 className={`text-left mt-4 !bg-transparent ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } `}>
                     Team : <br />
                     {project.team}
                   </h6>
-                  <h5 className="text-right ">{project.scope}</h5>
+                  <h5 className={`${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  text-right !bg-transparent`}>{project.scope}</h5>
                 </div>
               </div>
             </div>
             <h6
-              className={`text-[11px]  text-zinc-500  w-[55%]  text-center md:text-right leading-tight mt-6 pb-3 `}
+              className={`text-[11px]  !text-zinc-500 !bg-transparent  w-[55%]  text-center md:text-right leading-tight mt-6 pb-3 `}
             >
               {project.desc}
             </h6>
@@ -252,7 +267,7 @@ const MADEIN = () => {
               )
             ) : null}
           </div>
-        </div> 
+        </div>
 
         {/* r320 page3 */}
         <div
@@ -280,10 +295,10 @@ const MADEIN = () => {
               ) : null}
             </div>
           ) : null}
-        </div> 
-        
+        </div>
+
         {/* r320 page4 */}
-        
+
         <div
           className={`relative h-fit w-full  flex gap-2 overflow-hidden items-start  px-3 `}
         >
@@ -309,9 +324,9 @@ const MADEIN = () => {
               ) : null}
             </div>
           ) : null}
-        </div> 
+        </div>
         {/* smartliving page5 */}
-        
+
         <div
           className={`relative  w-full  -mt-11  flex  overflow-hidden items-center  px-3`}
         >
@@ -338,9 +353,9 @@ const MADEIN = () => {
             </div>
           ) : null}
         </div>
-        
+
         {/* smartliving page5 */}
-        
+
         <div
           className={`relative  w-full  -mt-11  flex  overflow-hidden items-center  px-3`}
         >
@@ -372,11 +387,10 @@ const MADEIN = () => {
 
       {/* mobile version */}
       <div
-        style={{backgroundColor: project.bgColor}}
+        style={{ backgroundColor: project.bgColor }}
         ref={mobileContainerRef}
-        className={`smartliving-desk ${
-          isMobile ? "visible": "hidden"
-        } w-full  pb-4 `}
+        className={`smartliving-desk ${isMobile ? "visible" : "hidden"
+          } w-full  pb-4 `}
       >
 
 
@@ -388,7 +402,7 @@ const MADEIN = () => {
           >
             <div className="smartcontainer  w-[68%]  aspect-[4/5] mt-1 rounded-sm  overflow-hidden  ">
               {project.ProjectAssets.length > 0 &&
-              project.ProjectAssets[0].endsWith(".mp4") ? (
+                project.ProjectAssets[0].endsWith(".mp4") ? (
                 <video
                   className="w-full h-full object-fit rounded-md object-center"
                   src={project.ProjectAssets[0]}
@@ -409,189 +423,208 @@ const MADEIN = () => {
 
             <div className="w-[70%] mt-2 font-medium h-full text-left">
               <div
-                className={`img-text w-full  ${
-                  project.name === "R320" ? " text-zinc-500  " : "text-zinc-500 "
-                }  items-end flex flex-col justify-start text-[11px] leading-none`}
+                className={`img-text w-full  ${project.name === "R320"
+                  ? " text-white hover:text-black "
+                  : project.name === "TOVO" ||
+                    project.name === "Panache" ||
+                    project.name === "FOLD"
+                    ? " text-zinc-400 hover:text-black "
+                    : "text-zinc-400 hover:text-white"
+                  }  items-end flex flex-col justify-start text-[11px] leading-none`}
               >
-                <div className="  h-1/2 w-full flex justify-between gap-3 items-center ">
-                  <h5 className="font-medium  whitespace-nowrap text-left">
-                    Built up Area : {project.buildArea} 
+                <div className="  h-1/2 w-full flex justify-between items-center ">
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } font-medium !bg-transparent  whitespace-nowrap text-left`}>
+                    Built up Area : {project.buildArea}
                   </h5>
 
-                  <h5 className="whitespace-nowrap   text-right ">
-                    Site area: {project.siteArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  whitespace-nowrap !bg-transparent text-right `}>
+                    Site area: {project.siteArea}
                   </h5>
                 </div>
 
                 <div className=" h-1/2 w-full flex-col justify-between items-center">
-                  <h5 className="text-left mt-1 ">{project.scope}</h5>
-
-                  <h5 className="text-left mt-4 ">
-                    Team : <br />
-                    {project.team}
+                  <h5 className={`${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  text-right !bg-transparent mt-1`}>{project.scope}</h5>
+                  <h5 className={`text-left mt-4 !bg-transparent ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } `}>
                   </h5>
                 </div>
 
                 <h6
-                  className={`text-[11px]  ${
-                    project.name === "R320" ? " text-zinc-500  " : "text-zinc-500 "
-                  }   w-full  text-right md:text-right leading-tight mt-5 `}
+                 className={`text-[11px]  ${project.name === "R320"
+                  ? " text-white hover:text-black "
+                  : project.name === "TOVO" ||
+                    project.name === "Panache" ||
+                    project.name === "FOLD"
+                    ? " !text-zinc-400 hover:text-black "
+                    : "!text-zinc-400 hover:text-white"
+                  }  whitespace-pre-wrap !bg-transparent  w-full  text-left md:text-right leading-tight mt-5 `}
                 >
                   {project.desc}
                 </h6>
               </div>
             </div>
           </div>
-        </div>      
-      
-      {/* page 1 */}
-      <div
-      className={`smartliving w-full mt-4 
-      } overflow-hidden rounded-md  `}
-    >
-      <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
-       
-        {project.ProjectAssets.length > 0 && project.ProjectAssets[1] ? (
-          project.ProjectAssets[1].type === "video/mp4" ? (
-            <video
-              className="w-full h-fit object-cover rounded-md object-center"
-              src={project.ProjectAssets[1]}
-              muted
-              autoPlay
-              loop
-              playsInline
-            />
-          ) : (
-            <img
-              className="w-full object-cover  rounded-sm object-center"
-              src={project.ProjectAssets[1] || "/placeholder.svg"}
-              alt={project.name}
-              srcSet={project.ProjectAssets[1]}
-            />
-          )
-        ) :null}
-      </div>
-    </div>
+        </div>
 
-      {/* page 2 */}
-      <div
-      className={`smartliving  w-full 
+        {/* page 1 */}
+        <div
+          className={`smartliving w-full mt-4 
+      } overflow-hidden rounded-md  `}
+        >
+          <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
+
+            {project.ProjectAssets.length > 0 && project.ProjectAssets[1] ? (
+              project.ProjectAssets[1].type === "video/mp4" ? (
+                <video
+                  className="w-full h-fit object-cover rounded-md object-center"
+                  src={project.ProjectAssets[1]}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  className="w-full object-cover  rounded-sm object-center"
+                  src={project.ProjectAssets[1] || "/placeholder.svg"}
+                  alt={project.name}
+                  srcSet={project.ProjectAssets[1]}
+                />
+              )
+            ) : null}
+          </div>
+        </div>
+
+        {/* page 2 */}
+        <div
+          className={`smartliving  w-full 
       } overflow-hidden rounded-md `}
-    >
-      <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">
-       
-        {project.ProjectAssets.length > 0 && project.ProjectAssets[2] ? (
-          project.ProjectAssets[2].type === "video/mp4" ? (
-            <video
-              className="w-full rounded-md object-center"
-              src={project.ProjectAssets[2]}
-              muted
-              autoPlay
-              playsInline
-              loop
-            />
-          ) : (
-            <img
-              className="w-full object-cover rounded-sm object-center"
-              src={project.ProjectAssets[2] || "/placeholder.svg"}
-              alt={project.name}
-              srcSet={project.ProjectAssets[2]}
-            />
-          )
-        ) :null}
-      </div>
-    </div>
+        >
+          <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">
 
-      {/* page 3 */}
-      <div
-      className={`smartliving  w-full  
+            {project.ProjectAssets.length > 0 && project.ProjectAssets[2] ? (
+              project.ProjectAssets[2].type === "video/mp4" ? (
+                <video
+                  className="w-full rounded-md object-center"
+                  src={project.ProjectAssets[2]}
+                  muted
+                  autoPlay
+                  playsInline
+                  loop
+                />
+              ) : (
+                <img
+                  className="w-full object-cover rounded-sm object-center"
+                  src={project.ProjectAssets[2] || "/placeholder.svg"}
+                  alt={project.name}
+                  srcSet={project.ProjectAssets[2]}
+                />
+              )
+            ) : null}
+          </div>
+        </div>
+
+        {/* page 3 */}
+        <div
+          className={`smartliving  w-full  
       } overflow-hidden rounded-md  `}
-    >
-      <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
-       
-        {project.ProjectAssets.length > 0 && project.ProjectAssets[3] ? (
-          project.ProjectAssets[3].type === "video/mp4" ? (
-            <video
-              className="w-full h-fit object-fit rounded-md object-center"
-              src={project.ProjectAssets[3]}
-              muted
-              autoPlay
-              loop
-              playsInline
-            />
-          ) : (
-            <img
-              className="w-full   rounded-sm object-center"
-              src={project.ProjectAssets[3] || "/placeholder.svg"}
-              alt={project.name}
-              srcSet={project.ProjectAssets[3]}
-            />
-          )
-        ) :null}
-      </div>
-    </div>
+        >
+          <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
+
+            {project.ProjectAssets.length > 0 && project.ProjectAssets[3] ? (
+              project.ProjectAssets[3].type === "video/mp4" ? (
+                <video
+                  className="w-full h-fit object-fit rounded-md object-center"
+                  src={project.ProjectAssets[3]}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  className="w-full   rounded-sm object-center"
+                  src={project.ProjectAssets[3] || "/placeholder.svg"}
+                  alt={project.name}
+                  srcSet={project.ProjectAssets[3]}
+                />
+              )
+            ) : null}
+          </div>
+        </div>
 
 
-      {/* page 4 */}
-      <div
-      className={`smartliving w-full 
+        {/* page 4 */}
+        <div
+          className={`smartliving w-full 
       } overflow-hidden rounded-md   `}
-    >
-      <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
-       
-        {project.ProjectAssets.length > 0 && project.ProjectAssets[5] ? (
-          isVideoFile(project.ProjectAssets[5]) ? (
-            <video
-              className="w-full aspect-auto object-cover rounded-md object-center"
-              src={project.ProjectAssets[5]}
-              muted
-              autoPlay
-              loop
-              playsInline
-            />
-          ) : (
-            <img
-              className="w-full h-full object-fit  rounded-sm object-center"
-              src={project.ProjectAssets[5] || "/placeholder.svg"}
-              alt={project.name}
-              srcSet={project.ProjectAssets[5]}
-            />
-          )
-        ) :null}
-      </div>
-    </div>
+        >
+          <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
 
-      {/* page 4 */}
-      <div
-      className={`smartliving  w-full  
+            {project.ProjectAssets.length > 0 && project.ProjectAssets[5] ? (
+              isVideoFile(project.ProjectAssets[5]) ? (
+                <video
+                  className="w-full aspect-auto object-cover rounded-md object-center"
+                  src={project.ProjectAssets[5]}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  className="w-full h-full object-fit  rounded-sm object-center"
+                  src={project.ProjectAssets[5] || "/placeholder.svg"}
+                  alt={project.name}
+                  srcSet={project.ProjectAssets[5]}
+                />
+              )
+            ) : null}
+          </div>
+        </div>
+
+        {/* page 4 */}
+        <div
+          className={`smartliving  w-full  
       } overflow-hidden rounded-md  `}
-    >
-      <div className=" w-full  flex justify-center overflow-hidden rounded-sm ">
-       
-        {project.ProjectAssets.length > 0 && project.ProjectAssets[4] ? (
-          isVideoFile(project.ProjectAssets[4]) ? (
-            <video
-              className="w-full object-cover rounded-md object-center"
-              src={project.ProjectAssets[4]}
-              muted
-              autoPlay
-              playsInline
-              loop
-            />
-          ) : (
-            <img
-              className="w-full h-full object-fit  rounded-sm object-center"
-              src={project.ProjectAssets[4] || "/placeholder.svg"}
-              alt={project.name}
-              srcSet={project.ProjectAssets[4]}
-            />
-          )
-        ) :null}
+        >
+          <div className=" w-full  flex justify-center overflow-hidden rounded-sm ">
+
+            {project.ProjectAssets.length > 0 && project.ProjectAssets[4] ? (
+              isVideoFile(project.ProjectAssets[4]) ? (
+                <video
+                  className="w-full object-cover rounded-md object-center"
+                  src={project.ProjectAssets[4]}
+                  muted
+                  autoPlay
+                  playsInline
+                  loop
+                />
+              ) : (
+                <img
+                  className="w-full h-full object-fit  rounded-sm object-center"
+                  src={project.ProjectAssets[4] || "/placeholder.svg"}
+                  alt={project.name}
+                  srcSet={project.ProjectAssets[4]}
+                />
+              )
+            ) : null}
+          </div>
+        </div>
+
+
       </div>
-    </div>
-
-
-    </div>
     </>
   )
 }

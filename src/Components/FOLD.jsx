@@ -187,9 +187,8 @@ const FOLD = () => {
 
       {/* Desktop version */}
       <div
-        className={`smartliving-desk ${
-          isMobile ? "hidden" : "visible"
-        } w-full  pb-4  px-3  `}
+        className={`smartliving-desk ${isMobile ? "hidden" : "visible"
+          } w-full  pb-4  px-3  `}
         ref={containerRef}
       >
         {/* landing page  fold */}
@@ -202,14 +201,14 @@ const FOLD = () => {
           <div className="flex flex-col ml-[50%] w-1/2 justify-start items-end">
             <div className="smartcontainer w-[55%]  aspect-[4/5] mt-4 rounded-sm overflow-hidden">
               {project.length > 0 &&
-              project.ProjectAssets[0].endsWith(".mp4") ? (
+                project.ProjectAssets[0].endsWith(".mp4") ? (
                 <video
                   className="w-full h-full object-fit rounded-md object-center"
                   src={project.ProjectAssets[0]}
                   muted
                   autoPlay
                   loop
-                  playsInline 
+                  playsInline
                 ></video>
               ) : (
                 <img
@@ -223,38 +222,48 @@ const FOLD = () => {
 
             <div className="w-[55%]  mt-4  font-medium h-full text-left">
               <div
-                className={`img-text w-full   ${
-                  project.name === "R320" || project.name === "TOVO"
-                    ? " text-white"
-                    : "text-zinc-400"
-                }  items-end flex flex-col justify-start text-[11px] leading-none`}
+                className={`img-text w-full   ${project.name === "R320" || project.name === "TOVO"
+                  ? " text-white"
+                  : "text-zinc-400"
+                  }  items-end flex flex-col justify-start text-[11px] leading-none`}
               >
                 <div className="h-1/2 w-full flex justify-between items-center ">
-                  <h5 className="font-medium  whitespace-nowrap text-left">
-                    Built up Area : {project.buildArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } font-medium !bg-transparent  whitespace-nowrap text-left`}>
+                    Built up Area : {project.buildArea}
                   </h5>
-                  <h5 className="whitespace-nowrap  text-right ">
-                    Site area: {project.siteArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  whitespace-nowrap !bg-transparent text-right `}>
+                    Site area: {project.siteArea}
                   </h5>
                 </div>
 
                 <div className=" h-1/2 w-full flex justify-between items-center">
-                  <h6 className="text-left mt-4 ">
+                  <h6 className={`text-left mt-4 !bg-transparent ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } `}>
                     Team : <br />
                     {project.team}
                   </h6>
 
-                  <h5 className="text-right ">{project.scope}</h5>
+                  <h5 className={`${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  text-right !bg-transparent`}>{project.scope}</h5>
                 </div>
               </div>
             </div>
 
             <h6
-              className={`text-[11px]  ${
-                project.name === "R320" || project.name === "TOVO"
-                  ? " text-white"
-                  : "text-zinc-400"
-              }  whitespace-pre-wrap  w-[55%]  text-center md:text-right leading-tight mt-6 pb-3 `}
+              className={`text-[11px]  ${project.name === "R320" || project.name === "TOVO"
+                  ? " !text-white"
+                  : "!text-zinc-400"
+                }  whitespace-pre-wrap  w-[55%] !bg-transparent text-center md:text-right leading-tight mt-6 pb-3 `}
             >
               {project.desc}
             </h6>
@@ -263,9 +272,8 @@ const FOLD = () => {
 
         {/* page 1*/}
         <div
-          className={`smartliving w-full h-screen   mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md  px-3`}
+          className={`smartliving w-full h-screen   mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md  px-3`}
         >
 
           <div className=" h-full flex justify-end w-full">
@@ -279,7 +287,7 @@ const FOLD = () => {
                     muted
                     autoPlay
                     loop
-                    playsInline 
+                    playsInline
                   />
                 ) : project.ProjectAssets[1].endsWith(".gif") ? (
                   <img
@@ -314,9 +322,8 @@ const FOLD = () => {
         {/* {page 2} */}
 
         <div
-          className={`smartliving w-full mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md `}
+          className={`smartliving w-full mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full  flex justify-center overflow-hidden rounded-sm ">
             {project.ProjectAssets.length > 0 && project.ProjectAssets[2] ? (
@@ -348,9 +355,8 @@ const FOLD = () => {
 
         {/* page 3*/}
         <div
-          className={`smartliving w-full h-screen  mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md  `}
+          className={`smartliving w-full h-screen  mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md  `}
         >
           <div className=" h-full flex justify-center  items-center w-full ">
             <div className=" h-3/5 w-full flex ml-[19%] justify-start items-center ">
@@ -362,7 +368,7 @@ const FOLD = () => {
                     muted
                     autoPlay
                     loop
-                    playsInline 
+                    playsInline
                   />
                 ) : project.ProjectAssets[3].endsWith(".gif") ? (
                   <img
@@ -436,7 +442,7 @@ const FOLD = () => {
       <div
         // style={{backgroundColor: project.bgColor}}
         ref={mobileContainerRef}
-        className={`px-3  ${isMobile ?"visible":"hidden"}`}
+        className={`px-3  ${isMobile ? "visible" : "hidden"}`}
 
       >
         <div className=" relative  w-full  flex-col justify-between ">
@@ -448,14 +454,14 @@ const FOLD = () => {
           >
             <div className="smartcontainer  w-[68%]  aspect-[4/5]  mt-2 rounded-sm  overflow-hidden  ">
               {project.ProjectAssets.length > 0 &&
-              project.ProjectAssets[0].endsWith(".mp4") ? (
+                project.ProjectAssets[0].endsWith(".mp4") ? (
                 <video
                   className="w-full h-full object-fit rounded-md object-center"
                   src={project.ProjectAssets[0]}
                   muted
                   autoPlay
                   loop
-                  playsInline 
+                  playsInline
                 ></video>
               ) : (
                 <img
@@ -469,45 +475,57 @@ const FOLD = () => {
 
             <div className="w-[68%] mt-2  font-medium h-full text-left">
               <div
-                className={`img-text w-full  ${
-                  project.name === "R320"
-                    ? " text-white hover:text-black "
-                    : project.name === "TOVO" ||
-                      project.name === "Panache" ||
-                      project.name === "FOLD"
+                className={`img-text w-full  ${project.name === "R320"
+                  ? " text-white hover:text-black "
+                  : project.name === "TOVO" ||
+                    project.name === "Panache" ||
+                    project.name === "FOLD"
                     ? " text-zinc-400 hover:text-black "
                     : "text-zinc-400 hover:text-white"
-                }  items-end flex flex-col justify-start text-[11px] leading-none`}
+                  }  items-end flex flex-col justify-start text-[11px] leading-none`}
               >
                 <div className="  h-1/2 w-full flex justify-between items-center ">
-                  <h5 className="font-medium  whitespace-nowrap text-left">
-                    Built up Area : {project.buildArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } font-medium !bg-transparent  whitespace-nowrap text-left`}>
+                    Built up Area : {project.buildArea}
                   </h5>
-
-                  <h5 className="whitespace-nowrap  text-right ">
-                    Site area: {project.siteArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  whitespace-nowrap !bg-transparent text-right `}>
+                    Site area: {project.siteArea}
                   </h5>
                 </div>
 
                 <div className=" h-1/2 w-full flex-col justify-between items-center">
-                  <h5 className="text-left mt-1 ">{project.scope}</h5>
 
-                  <h5 className="text-left mt-4 ">
+                  <h5 className={`${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  text-right !bg-transparent mt-1`}>{project.scope}</h5>
+                  <h5 className={`text-left mt-4 !bg-transparent ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } `}>
                     Team : <br />
                     {project.team}
                   </h5>
+
                 </div>
 
+
+
                 <h6
-                  className={`text-[11px]  ${
-                    project.name === "R320"
-                      ? " text-white hover:text-black "
-                      : project.name === "TOVO" ||
-                        project.name === "Panache" ||
-                        project.name === "FOLD"
-                      ? " text-zinc-400 hover:text-black "
-                      : "text-zinc-400 hover:text-white"
-                  }  whitespace-pre-wrap  w-full  text-left md:text-right leading-tight mt-5 `}
+                  className={`text-[11px]  ${project.name === "R320"
+                    ? " text-white hover:text-black "
+                    : project.name === "TOVO" ||
+                      project.name === "Panache" ||
+                      project.name === "FOLD"
+                      ? " !text-zinc-400 hover:text-black "
+                      : "!text-zinc-400 hover:text-white"
+                    }  whitespace-pre-wrap !bg-transparent  w-full  text-left md:text-right leading-tight mt-5 `}
                 >
                   {project.desc}
                 </h6>
@@ -522,9 +540,9 @@ const FOLD = () => {
           overflow-hidden rounded-md  px-3`}
         >
           <div
-            className={`h-full  ${isMobile ? " flex-col": "flex" } justify-center w-full`}
+            className={`h-full  ${isMobile ? " flex-col" : "flex"} justify-center w-full`}
           >
-            <div className={`h-full  ${isMobile ? " w-full px-5": "w-2/5" }  flex justify-center items-center`}   >
+            <div className={`h-full  ${isMobile ? " w-full px-5" : "w-2/5"}  flex justify-center items-center`}   >
               {project.ProjectAssets.length > 0 && project.ProjectAssets[1] ? (
                 project.ProjectAssets[1].type === "video/mp4" ? (
                   <video
@@ -533,7 +551,7 @@ const FOLD = () => {
                     muted
                     autoPlay
                     loop
-                    playsInline 
+                    playsInline
                   />
                 ) : project.ProjectAssets[1].endsWith(".gif") ? (
                   <img
@@ -552,8 +570,8 @@ const FOLD = () => {
               ) : null}
             </div>
 
-            <div className={`h-full  ${isMobile ? " w-full  mt-4 ": "w-2/5 " } flex justify-center  items-end`}>
-              <p className={`text-[11px]   ${isMobile?" w-full ":"w-4/5"} text-zinc-400 text-right leading-none  `}>
+            <div className={`h-full  ${isMobile ? " w-full  mt-4 " : "w-2/5 "} flex justify-center  items-end`}>
+              <p className={`text-[11px]   ${isMobile ? " w-full " : "w-4/5"} text-zinc-400 text-right leading-none  `}>
                 A Linear proportion site, three volume has been introduced to
                 achieve the floor area. Cantiliver Projection of the volumehas
                 been introduced to emphasize the linearity. The play of lines
@@ -602,12 +620,11 @@ const FOLD = () => {
         {/* page 3*/}
         <div
           className={`smartliving w-full
-            ${
-            isMobile ? "mt-4 h-[70vh] " : "mt-6 h-screen px-3"
-          } overflow-hidden rounded-md `}
+            ${isMobile ? "mt-4 h-[70vh] " : "mt-6 h-screen px-3"
+            } overflow-hidden rounded-md `}
         >
           <div className=" h-full flex justify-start items-center w-full ">
-            <div className={` ${isMobile? "h-4/5 w-7/12":"h-3/5 w-2/5"}  flex justify-center items-center `}>
+            <div className={` ${isMobile ? "h-4/5 w-7/12" : "h-3/5 w-2/5"}  flex justify-center items-center `}>
               {project.ProjectAssets.length > 0 && project.ProjectAssets[3] ? (
                 project.ProjectAssets[1].type === "video/mp4" ? (
                   <video
@@ -616,7 +633,7 @@ const FOLD = () => {
                     muted
                     autoPlay
                     loop
-                    playsInline 
+                    playsInline
                   />
                 ) : project.ProjectAssets[3].endsWith(".gif") ? (
                   <img

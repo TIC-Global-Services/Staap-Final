@@ -95,7 +95,7 @@ const TOVOProjectTable = ({ project }) => {
     if (projectPageElement) {
       gsap.from(projectPageElement, {
         y: "54%",
-        duration: 1,
+        duration: 1.3,
         ease: "power1.in",
       });
     }
@@ -340,13 +340,13 @@ const TOVOProjectTable = ({ project }) => {
               <div className="mt-44">
                 <h6 className={`text-[11px] 
               ${project.name === "R320"
-                    ? " text-white hover:text-black "
+                    ? " !text-white hover:text-black "
                     : project.name === "TOVO" ||
                       project.name === "Panache" ||
                       project.name === "FOLD"
-                      ? " text-zinc-400 "
-                      : "text-zinc-400 "
-                  }   text-left md:text-right leading-tight `}
+                      ? " !text-zinc-400 "
+                      : "!text-zinc-400 "
+                  }   text-left !bg-transparent md:text-right leading-tight `}
                 >
                   {project.desc}
                 </h6>
@@ -471,7 +471,7 @@ const TOVOProjectTable = ({ project }) => {
               <div
                 className={`  w-full text h-full  flex flex-col justify-center items-start `}
               >
-                <h5 className=" text-[11px]  text-black">DESIGN INTEGRATION</h5>
+                <h5 className=" text-[11px]  !bg-transparent !text-black">DESIGN INTEGRATION</h5>
 
                 <p className=" text-[11px] text-left mt-1 leading-none text-zinc-400  ">
                   To create a space that complements this innovative approach by
@@ -481,7 +481,7 @@ const TOVOProjectTable = ({ project }) => {
               </div>
 
               <div className=" h-full w-full flex flex-col justify-center items-start mt-4   ">
-                <h5 className=" text-[11px]  text-black">COLOUR + MATERIAL</h5>
+                <h5 className=" text-[11px] !bg-transparent !text-black">COLOUR + MATERIAL</h5>
                 <p className=" text-[11px] text-left mt-1 leading-none text-zinc-400  ">
                   The use of neutral color tones - black and white - resonates
                   with the brand, communicating an air of openness without
@@ -501,7 +501,7 @@ const TOVOProjectTable = ({ project }) => {
               <div
                 className={` pl-[19%] w-[46%] text h-full  flex flex-col justify-center items-start `}
               >
-                <h5 className=" text-[11px]  text-black">DESIGN INTEGRATION</h5>
+                <h5 className=" text-[11px] !bg-transparent !text-black">DESIGN INTEGRATION</h5>
 
                 <p className=" text-[11px] text-left mt-1 leading-none text-zinc-400  ">
                   To create a space that complements this innovative approach by
@@ -511,7 +511,7 @@ const TOVOProjectTable = ({ project }) => {
               </div>
 
               <div className="text pl-3 h-full w-[28%]  flex flex-col justify-center items-end   ">
-                <h5 className=" text-[11px]  text-black">COLOUR + MATERIAL</h5>
+                <h5 className=" text-[11px] !bg-transparent !text-black">COLOUR + MATERIAL</h5>
                 <p className=" text-[11px] text-right mt-1 leading-none text-zinc-400  ">
                   The use of neutral color tones - black and white - resonates
                   with the brand, communicating an air of openness without
@@ -581,7 +581,7 @@ const TOVOProjectTable = ({ project }) => {
 
             <div className=" mt-4 right-0 h-full flex flex-col justify-center items-start  ">
               <div className=" planning-box  flex flex-col justify-center items-start ">
-                <h5 className=" text-[11px] text-right  text-black">
+                <h5 className=" text-[11px] text-right !bg-transparent !text-black">
                   PLANNING{" "}
                 </h5>
 
@@ -634,7 +634,7 @@ const TOVOProjectTable = ({ project }) => {
             <div
               className={` pl-[19%] w-[46%] text h-full  flex flex-col justify-center items-start `}
             >
-              <h5 className=" text-[11px]    text-black">DESIGN INTEGRATION</h5>
+              <h5 className=" text-[11px]  !bg-transparent  !text-black">DESIGN INTEGRATION</h5>
 
               <p className=" text-[11px] text-left mt-1 leading-none text-zinc-400  ">
                 To create a space that complements this innovative approach by
@@ -645,7 +645,7 @@ const TOVOProjectTable = ({ project }) => {
 
             <div className=" right-0  pl-3 h-full w-[28.2%]  flex flex-col justify-center items-start  ">
               <div className=" planning-box  flex flex-col justify-center items-end ">
-                <h5 className=" text-[11px] text-right  text-black">
+                <h5 className=" text-[11px] text-right  !bg-transparent !text-black">
                   PLANNING{" "}
                 </h5>
 
@@ -734,7 +734,7 @@ const TOVOProjectTable = ({ project }) => {
               <div
                 className={` w-full text h-full  flex flex-col justify-center items-start `}
               >
-                <h5 className=" text-[11px]  text-black">
+                <h5 className=" text-[11px]  !bg-transparent !text-black">
                   DESIGN + DETAIL [ FACADE ]
                 </h5>
 
@@ -780,7 +780,7 @@ const TOVOProjectTable = ({ project }) => {
               <div
                 className={` pl-[19%] w-[46%] text  flex flex-col justify-center items-start `}
               >
-                <h5 className=" text-[11px]  text-black">
+                <h5 className=" text-[11px] !bg-transparent !text-black">
                   DESIGN + DETAIL [ FACADE ]
                 </h5>
 

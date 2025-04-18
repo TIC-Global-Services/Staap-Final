@@ -91,17 +91,12 @@ const Panache = ({ bgColor }) => {
 
   return (
     <>
-      {/* Fixed Navbar remains unchanged */}
 
-      {/* <div className="fixed top-0  left-0 w-full z-[999]">
-        <Navbar bgColor={project.navColor} />
-      </div> */}
 
       {/* Desktop version */}
       <div
-        className={`smartliving-desk ${
-          isMobile ? "hidden" : "visible"
-        } w-full  pb-4  px-3  `}
+        className={`smartliving-desk ${isMobile ? "hidden" : "visible"
+          } w-full  pb-4  px-3  `}
         ref={containerRef}
       >
         {/* landing page */}
@@ -113,7 +108,7 @@ const Panache = ({ bgColor }) => {
           <div className="flex flex-col ml-[50%] w-1/2 justify-start items-end">
             <div className="smartcontainer w-[55%]  aspect-[4/5] mt-4 rounded-sm overflow-hidden">
               {project.ProjectAssets.length > 0 &&
-              project.ProjectAssets[0].endsWith(".mp4") ? (
+                project.ProjectAssets[0].endsWith(".mp4") ? (
                 <video
                   className="w-full h-full object-fit rounded-md object-center"
                   src={project.ProjectAssets[0]}
@@ -134,38 +129,48 @@ const Panache = ({ bgColor }) => {
 
             <div className="w-[55%]  mt-4  font-medium h-full text-left">
               <div
-                className={`img-text w-full   ${
-                  project.name === "R320" || project.name === "TOVO"
-                    ? " text-white"
-                    : "text-zinc-400"
-                }  items-end flex flex-col justify-start text-[11px] leading-none`}
+                className={`img-text w-full   ${project.name === "R320" || project.name === "TOVO"
+                  ? " text-white"
+                  : "text-zinc-400"
+                  }  items-end flex flex-col justify-start text-[11px] leading-none`}
               >
                 <div className="h-1/2 w-full flex justify-between items-center ">
-                  <h5 className="font-medium  whitespace-nowrap text-left">
-                    Built up Area : {project.buildArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } font-medium !bg-transparent  whitespace-nowrap text-left`}>
+                    Built up Area : {project.buildArea}
                   </h5>
-                  <h5 className="whitespace-nowrap  text-right ">
-                    Site area: {project.siteArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  whitespace-nowrap !bg-transparent text-right `}>
+                    Site area: {project.siteArea}
                   </h5>
                 </div>
 
                 <div className=" h-1/2 w-full flex justify-between items-center">
-                  <h6 className="text-left mt-4 ">
+                  <h6 className={`text-left mt-4 !bg-transparent ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } `}>
                     Team : <br />
                     {project.team}
                   </h6>
 
-                  <h5 className="text-right ">{project.scope}</h5>
+                  <h5 className={`${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  text-right !bg-transparent`}>{project.scope}</h5>
                 </div>
               </div>
             </div>
 
             <h6
-              className={`text-[11px]  ${
-                project.name === "R320" || project.name === "TOVO"
-                  ? " text-white"
-                  : "text-zinc-400"
-              }  whitespace-pre-wrap  w-[55%]  text-center md:text-right leading-tight mt-6 pb-3 `}
+              className={`text-[11px]  ${project.name === "R320" || project.name === "TOVO"
+                ? " !text-white"
+                : "!text-zinc-400"
+                }  whitespace-pre-wrap  w-[55%] !bg-transparent  text-center md:text-right leading-tight mt-6 pb-3 `}
             >
               {project.desc}
             </h6>
@@ -174,16 +179,15 @@ const Panache = ({ bgColor }) => {
 
         {/* page 1*/}
         <div
-          className={`smartliving w-full h-screen ${
-            isMobile ? "mt-4 " : "-mt-4"
-          } overflow-hidden rounded-md  `}
+          className={`smartliving w-full h-screen ${isMobile ? "mt-4 " : "-mt-4"
+            } overflow-hidden rounded-md  `}
         >
           <div className=" h-full flex justify-end   w-full">
             <div className="h-full w-1/3 mr-10  flex justify-center items-center ">
               <video
                 className=" h-3/4  w-fit object-top  object-contain "
                 autoPlay
-                
+
                 playsInline
                 loop
                 src={pan2}
@@ -207,9 +211,8 @@ const Panache = ({ bgColor }) => {
 
         {/* page 2*/}
         <div
-          className={`smartliving w-full h-screen  mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md  px-3`}
+          className={`smartliving w-full h-screen  mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md  px-3`}
         >
           <div className=" h-full flex justify-center w-full ">
             <div className=" h-full w-2/5  flex justify-center items-center ">
@@ -235,18 +238,18 @@ const Panache = ({ bgColor }) => {
             </div>
 
             <div className="text h-full w-2/5 pt-96  flex flex-col justify-center items-end   ">
-               
-            <div className="hidden">
-              
-              <h5 className=" text-[13px] text-black ">FOYER I LIVING </h5>
 
-              <p className=" text-[11px] text-right text-zinc-400  ">
-                Designed with Comforting materials in a natural tone of wood and{" "}
-                <br />
-                stone, Highlighted with brass inlay and antiquities.
-              </p>
+              <div className="hidden">
 
-                </div>
+                <h5 className=" text-[13px] text-black ">FOYER I LIVING </h5>
+
+                <p className=" text-[11px] text-right text-zinc-400  ">
+                  Designed with Comforting materials in a natural tone of wood and{" "}
+                  <br />
+                  stone, Highlighted with brass inlay and antiquities.
+                </p>
+
+              </div>
             </div>
           </div>
         </div>
@@ -254,9 +257,8 @@ const Panache = ({ bgColor }) => {
         {/* {page 3} */}
 
         <div
-          className={`smartliving w-full h-screen mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md `}
+          className={`smartliving w-full h-screen mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
             {project.ProjectAssets.length > 0 && project.ProjectAssets[3] ? (
@@ -283,9 +285,8 @@ const Panache = ({ bgColor }) => {
 
         {/* {page 4} */}
         <div
-          className={`smartliving w-full mt-${
-            isMobile ? "4" : "6"
-          } overflow-hidden rounded-md `}
+          className={`smartliving w-full mt-${isMobile ? "4" : "6"
+            } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full  flex justify-center overflow-hidden rounded-sm ">
             {project.ProjectAssets.length > 0 && project.ProjectAssets[4] ? (
@@ -312,9 +313,8 @@ const Panache = ({ bgColor }) => {
 
         {/* page 5*/}
         <div
-          className={`smartliving w-full   mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md  px-3`}
+          className={`smartliving w-full   mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md  px-3`}
         >
           <div className=" h-full flex justify-center w-full">
             <div className=" h-full w-2/5 flex justify-center items-center ">
@@ -340,31 +340,30 @@ const Panache = ({ bgColor }) => {
             </div>
 
             <div className="text h-full w-2/5 pt-96 flex flex-col justify-center items-end   ">
-               
 
-            <div className="hidden">
-                
-              <h5 className=" text-[13px] leading-none text-black">
-                MASTER BEDROOM
-              </h5>
 
-              <p className=" text-[11px] text-right leading-none text-zinc-400  ">
-                Designed with pastel green fabric, walnut wood with grey marble,
-                and timecoat concrete with <br /> brass inlays forming grids
-                defining the space
-              </p>
+              <div className="hidden">
 
-                </div>
-              
+                <h5 className=" text-[13px] leading-none text-black">
+                  MASTER BEDROOM
+                </h5>
+
+                <p className=" text-[11px] text-right leading-none text-zinc-400  ">
+                  Designed with pastel green fabric, walnut wood with grey marble,
+                  and timecoat concrete with <br /> brass inlays forming grids
+                  defining the space
+                </p>
+
+              </div>
+
             </div>
           </div>
         </div>
 
         {/* {page 6} */}
         <div
-          className={`smartliving w-full mt-${
-            isMobile ? "4" : "6"
-          } overflow-hidden rounded-md `}
+          className={`smartliving w-full mt-${isMobile ? "4" : "6"
+            } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full h-full   flex justify-center overflow-hidden rounded-sm ">
             {project.ProjectAssets.length > 0 && project.ProjectAssets[6] ? (
@@ -391,9 +390,8 @@ const Panache = ({ bgColor }) => {
 
         {/* page 7*/}
         <div
-          className={`smartliving w-full    mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md  px-3`}
+          className={`smartliving w-full    mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md  px-3`}
         >
           <div className=" h-full flex justify-center w-full">
             <div className="  w-2/5  flex justify-center items-center ">
@@ -419,21 +417,21 @@ const Panache = ({ bgColor }) => {
             </div>
 
             <div className=" text h-full w-2/5 pt-96 flex flex-col justify-center items-end ">
-                
-                <div className={`hidden`} >                 
 
-              <h5 className=" text-[13px] leading-none  text-black">
-                BAR LOUNGE I TERRACE
-              </h5>
+              <div className={`hidden`} >
 
-              <p className=" text-[11px] text-right leading-none text-zinc-400  ">
-                Curated with walnut wood balancing with leather upholstery and
-                leather finish granite, Black stone <br /> then overall the
-                space is enhanced with glass brick.
-              </p>
+                <h5 className=" text-[13px] leading-none  text-black">
+                  BAR LOUNGE I TERRACE
+                </h5>
 
-                </div>
-            
+                <p className=" text-[11px] text-right leading-none text-zinc-400  ">
+                  Curated with walnut wood balancing with leather upholstery and
+                  leather finish granite, Black stone <br /> then overall the
+                  space is enhanced with glass brick.
+                </p>
+
+              </div>
+
             </div>
 
           </div>
@@ -442,9 +440,8 @@ const Panache = ({ bgColor }) => {
         {/* page 8 */}
 
         <div
-          className={`w-full  mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md `}
+          className={`w-full  mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full   flex justify-center overflow-hidden rounded-sm ">
             {project.ProjectAssets.length > 0 && project.ProjectAssets[8] ? (
@@ -473,9 +470,8 @@ const Panache = ({ bgColor }) => {
         {/* page 9 */}
 
         <div
-          className={`w-full  mt-${
-            isMobile ? "4 " : "6"
-          } overflow-hidden rounded-md `}
+          className={`w-full  mt-${isMobile ? "4 " : "6"
+            } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full  flex justify-center overflow-hidden rounded-sm ">
             {project.ProjectAssets.length > 0 && project.ProjectAssets[9] ? (
@@ -516,7 +512,7 @@ const Panache = ({ bgColor }) => {
           >
             <div className="smartcontainer  w-[68%]  aspect-[4/5]  mt-1 rounded-sm  overflow-hidden  ">
               {project.ProjectAssets.length > 0 &&
-              project.ProjectAssets[0].endsWith(".mp4") ? (
+                project.ProjectAssets[0].endsWith(".mp4") ? (
                 <video
                   className="w-full h-full object-fit rounded-md object-center"
                   src={project.ProjectAssets[0]}
@@ -537,45 +533,57 @@ const Panache = ({ bgColor }) => {
 
             <div className="w-[68%] mt-2  font-medium h-full text-left">
               <div
-                className={`img-text w-full  ${
-                  project.name === "R320"
-                    ? " text-white hover:text-black "
-                    : project.name === "TOVO" ||
-                      project.name === "Panache" ||
-                      project.name === "FOLD"
+                className={`img-text w-full  ${project.name === "R320"
+                  ? " text-white hover:text-black "
+                  : project.name === "TOVO" ||
+                    project.name === "Panache" ||
+                    project.name === "FOLD"
                     ? " text-zinc-400 hover:text-black "
                     : "text-zinc-400 hover:text-white"
-                }  items-end flex flex-col justify-start text-[11px] leading-none`}
+                  }  items-end flex flex-col justify-start text-[11px] leading-none`}
               >
                 <div className="  h-1/2 w-full flex justify-between items-center ">
-                  <h5 className="font-medium  whitespace-nowrap text-left">
-                    Built up Area : {project.buildArea} 
+                <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } font-medium !bg-transparent  whitespace-nowrap text-left`}>
+                    Built up Area : {project.buildArea}
                   </h5>
-
-                  <h5 className="whitespace-nowrap  text-right ">
-                    Site area: {project.siteArea} 
+                  <h5 className={` ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    }  whitespace-nowrap !bg-transparent text-right `}>
+                    Site area: {project.siteArea}
                   </h5>
                 </div>
 
                 <div className=" h-1/2 w-full flex-col justify-between items-center">
-                  <h5 className="text-left mt-1 ">{project.scope}</h5>
 
-                  <h5 className="text-left mt-4 ">
+                <h5 className={`${project.name === "R320" || project.name === "TOVO"
+                  ? " !text-white"
+                  : "!text-zinc-400"
+                  }  text-right !bg-transparent mt-1`}>{project.scope}</h5>
+                <h5 className={`text-left mt-4 !bg-transparent ${project.name === "R320" || project.name === "TOVO"
+                    ? " !text-white"
+                    : "!text-zinc-400"
+                    } `}>
                     Team : <br />
                     {project.team}
                   </h5>
+
                 </div>
 
+
+
                 <h6
-                  className={`text-[11px]  ${
-                    project.name === "R320"
-                      ? " text-white hover:text-black "
-                      : project.name === "TOVO" ||
-                        project.name === "Panache" ||
-                        project.name === "FOLD"
-                      ? " text-zinc-400 hover:text-black "
-                      : "text-zinc-400 hover:text-white"
-                  }  whitespace-pre-wrap  w-full  text-left md:text-right leading-tight mt-5 `}
+                  className={`text-[11px]  ${project.name === "R320"
+                    ? " text-white hover:text-black "
+                    : project.name === "TOVO" ||
+                      project.name === "Panache" ||
+                      project.name === "FOLD"
+                      ? " !text-zinc-400 hover:text-black "
+                      : "!text-zinc-400 hover:text-white"
+                    }  whitespace-pre-wrap !bg-transparent  w-full  text-left md:text-right leading-tight mt-5 `}
                 >
                   {project.desc}
                 </h6>
@@ -590,14 +598,12 @@ const Panache = ({ bgColor }) => {
           overflow-hidden rounded-md  px-3`}
         >
           <div
-            className={`h-full  ${
-              isMobile ? " flex-col" : "flex"
-            } justify-center w-full`}
+            className={`h-full  ${isMobile ? " flex-col" : "flex"
+              } justify-center w-full`}
           >
             <div
-              className={`h-full  ${
-                isMobile ? " w-full px-5" : "w-2/5"
-              }  flex justify-center items-center`}
+              className={`h-full  ${isMobile ? " w-full px-5" : "w-2/5"
+                }  flex justify-center items-center`}
             >
               {project.ProjectAssets.length > 0 && project.ProjectAssets[1] ? (
                 isVideoFile(project.ProjectAssets[1]) ? (
@@ -627,14 +633,12 @@ const Panache = ({ bgColor }) => {
             </div>
 
             <div
-              className={`h-full  ${
-                isMobile ? " w-full  mt-4 " : "w-2/5 "
-              } flex justify-center  items-end`}
+              className={`h-full  ${isMobile ? " w-full  mt-4 " : "w-2/5 "
+                } flex justify-center  items-end`}
             >
               <p
-                className={`text-[11px]   ${
-                  isMobile ? " w-full " : "w-4/5"
-                } text-zinc-400 text-right leading-none  `}
+                className={`text-[11px]   ${isMobile ? " w-full " : "w-4/5"
+                  } text-zinc-400 text-right leading-none  `}
               >
                 The Volumes overlaps and intersects creating a sense of open and
                 closure on the sides, while enveloping the essence of
@@ -654,14 +658,12 @@ const Panache = ({ bgColor }) => {
           overflow-hidden rounded-md  px-3  `}
         >
           <div
-            className={`h-full  ${
-              isMobile ? "flex" : "flex"
-            } justify-between  items-end w-full `}
+            className={`h-full  ${isMobile ? "flex" : "flex"
+              } justify-between  items-end w-full `}
           >
             <div
-              className={`h-full  ${
-                isMobile ? " w-1/2 " : "w-2/5"
-              }  flex justify-c items-center`}
+              className={`h-full  ${isMobile ? " w-1/2 " : "w-2/5"
+                }  flex justify-c items-center`}
             >
               {project.ProjectAssets.length > 0 && project.ProjectAssets[2] ? (
                 isVideoFile(project.ProjectAssets[2]) ? (
@@ -689,18 +691,16 @@ const Panache = ({ bgColor }) => {
                 )
               ) : null}
             </div>
-            
+
 
             <div
-              className={`h-full  ${
-                isMobile ? " w-1/2  flex-col mt-4 hidden " : "w-2/5 "   //hidden the contents
-              } flex justify-center  items-end`}
+              className={`h-full  ${isMobile ? " w-1/2  flex-col mt-4 hidden " : "w-2/5 "   //hidden the contents
+                } flex justify-center  items-end`}
             >
               <h5 className=" text-black text-[11px] ">FOYER I LIVING </h5>
               <p
-                className={`text-[11px] ${
-                  isMobile ? " w-full " : "w-4/5"
-                } text-zinc-400 text-right leading-none  `}
+                className={`text-[11px] ${isMobile ? " w-full " : "w-4/5"
+                  } text-zinc-400 text-right leading-none  `}
               >
                 Designed with Comforting materials in a natural tone of wood and
                 stone, Highlighted with brass inlay and antiquities.
@@ -714,8 +714,7 @@ const Panache = ({ bgColor }) => {
         {/*  page 3 */}
         <div
           className={`smartliving w-full  
-            ${
-              isMobile ? "mt-12 h-[30vh] px-3 " : "mt-8 h-screen "
+            ${isMobile ? "mt-12 h-[30vh] px-3 " : "mt-8 h-screen "
             } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">
@@ -750,8 +749,7 @@ const Panache = ({ bgColor }) => {
         {/*page4 */}
         <div
           className={`smartliving w-full  
-            ${
-              isMobile ? "mt-2 h-[30vh] px-3 " : "mt-8 h-screen "
+            ${isMobile ? "mt-2 h-[30vh] px-3 " : "mt-8 h-screen "
             } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">
@@ -790,14 +788,12 @@ const Panache = ({ bgColor }) => {
           overflow-hidden rounded-md  px-3  `}
         >
           <div
-            className={`h-full  ${
-              isMobile ? "flex" : "flex"
-            } justify-between  items-end w-full `}
+            className={`h-full  ${isMobile ? "flex" : "flex"
+              } justify-between  items-end w-full `}
           >
             <div
-              className={`h-full  ${
-                isMobile ? " w-1/2 " : "w-2/5"
-              }  flex justify-c items-center`}
+              className={`h-full  ${isMobile ? " w-1/2 " : "w-2/5"
+                }  flex justify-c items-center`}
             >
               {project.ProjectAssets.length > 0 && project.ProjectAssets[5] ? (
                 isVideoFile(project.ProjectAssets[5]) ? (
@@ -827,15 +823,13 @@ const Panache = ({ bgColor }) => {
             </div>
 
             <div
-              className={`h-full  ${
-                isMobile ? " w-1/2  flex-col mt-4 hidden" : "w-2/5 "   //hidden the contents
-              } flex justify-center  items-end`}
+              className={`h-full  ${isMobile ? " w-1/2  flex-col mt-4 hidden" : "w-2/5 "   //hidden the contents
+                } flex justify-center  items-end`}
             >
               <h5 className=" text-black text-[11px] "> MASTER BEDROOM</h5>
               <p
-                className={`text-[11px]   ${
-                  isMobile ? " w-full " : "w-4/5"
-                } text-zinc-400 text-right leading-none  `}
+                className={`text-[11px]   ${isMobile ? " w-full " : "w-4/5"
+                  } text-zinc-400 text-right leading-none  `}
               >
                 Designed with pastel green fabric, walnut wood with grey marble,
                 and timecoat concrete with brass inlays forming grids defining
@@ -848,8 +842,7 @@ const Panache = ({ bgColor }) => {
         {/*page 6 */}
         <div
           className={`smartliving w-full  
-            ${
-              isMobile ? "mt-6 h-[30vh] px-3 " : "mt-8 h-screen "
+            ${isMobile ? "mt-6 h-[30vh] px-3 " : "mt-8 h-screen "
             } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">
@@ -888,14 +881,12 @@ const Panache = ({ bgColor }) => {
           overflow-hidden rounded-md  px-3  `}
         >
           <div
-            className={`h-full  ${
-              isMobile ? "flex" : "flex"
-            } justify-between  items-end w-full `}
+            className={`h-full  ${isMobile ? "flex" : "flex"
+              } justify-between  items-end w-full `}
           >
             <div
-              className={`h-full  ${
-                isMobile ? " w-1/2 " : "w-2/5"
-              }  flex justify-c items-center`}
+              className={`h-full  ${isMobile ? " w-1/2 " : "w-2/5"
+                }  flex justify-c items-center`}
             >
               {project.ProjectAssets.length > 0 && project.ProjectAssets[7] ? (
                 isVideoFile(project.ProjectAssets[7]) ? (
@@ -925,15 +916,13 @@ const Panache = ({ bgColor }) => {
             </div>
 
             <div
-              className={`h-full  ${
-                isMobile ? " w-1/2  flex-col mt-4  hidden" : "w-2/5 " //hidden the contents
-              } flex justify-center  items-end`}
+              className={`h-full  ${isMobile ? " w-1/2  flex-col mt-4  hidden" : "w-2/5 " //hidden the contents
+                } flex justify-center  items-end`}
             >
               <h5 className=" text-black text-[11px] ">BAR LOUNGE I TERRACE</h5>
               <p
-                className={`text-[11px]   ${
-                  isMobile ? " w-full " : "w-4/5"
-                } text-zinc-400 text-right leading-none  `}
+                className={`text-[11px]   ${isMobile ? " w-full " : "w-4/5"
+                  } text-zinc-400 text-right leading-none  `}
               >
                 Curated with walnut wood balancing with leather upholstery and
                 leather finish granite, Black stone then overall the space is
@@ -946,8 +935,7 @@ const Panache = ({ bgColor }) => {
         {/*page 8 */}
         <div
           className={`smartliving w-full  
-            ${
-              isMobile ? "mt-6 h-[30vh] px-3 " : "mt-8 h-screen "
+            ${isMobile ? "mt-6 h-[30vh] px-3 " : "mt-8 h-screen "
             } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">
@@ -982,8 +970,7 @@ const Panache = ({ bgColor }) => {
         {/*page 9 */}
         <div
           className={`smartliving w-full  
-            ${
-              isMobile ? "mt-2 h-[30vh] px-3 " : "mt-8 h-screen "
+            ${isMobile ? "mt-2 h-[30vh] px-3 " : "mt-8 h-screen "
             } overflow-hidden rounded-md `}
         >
           <div className="img-big1 w-full h-full  flex justify-center overflow-hidden rounded-sm ">

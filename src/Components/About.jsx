@@ -293,7 +293,7 @@ const About = () => {
 
                 <div className={`w-[20%] h-full text-left ${isDarkMode ? " text-white" : "text-black"}`}>
                   <h5>Kavin Raj</h5>
-                  <h5>Vinmeen Kritheka</h5>
+                  <h5>Vinmeen Kirtheka</h5>
                   <h5>Vyomini B</h5>
                   <p className=" text-zinc-400">Sai Sidharth</p>
                   <p className=" text-zinc-400">Harish Raghavan</p>
@@ -333,10 +333,10 @@ const About = () => {
 
                 <div className="w-[50%] mr-4  h-full text-left ">
                   <h5>[Designer]</h5>
-                  <h5>[Parametric]</h5>
+                  <h5>[Computational]</h5>
                   <h5>[Urban designer]</h5>
                   <h5>[Designer]</h5>
-                  <h5>[Creative]</h5>
+                  <h5>[Graphics]</h5>
                 </div>
               </div>
 
@@ -345,7 +345,7 @@ const About = () => {
                   <p>[Architect]</p>
                 </div>
                 <div className={`w-2/3 h-full ml-4 ${isDarkMode ? " text-white" : "text-black"}  text-left`}>
-                  <h5>Sanjay Kannan </h5>
+                  <h5>Sanjay Kanna</h5>
                   <p className=" text-zinc-400">Rukkesh Kannan</p>
                   <p className=" text-zinc-400">Sonika Matta</p>
                 </div>
